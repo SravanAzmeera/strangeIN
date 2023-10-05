@@ -1,0 +1,38 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar>
+    <ion-img src="assets/icon/cc14a9e1-dd2b-44a5-812c-d1f9710393f3.jpeg" class="header-image" slot="start"></ion-img>
+    <ion-img src="assets/icon/5cc7aa4f-7468-4185-80ce-eb5fc46d32c3.jpeg" class="header-img" slot="start"></ion-img>
+    <ion-title></ion-title>
+    <ion-select class="custom-select" slot="start">
+      <ion-select-option value="english" class="custom-option">English</ion-select-option>
+      <ion-select-option value="hindi" class="custom-option">Hindi</ion-select-option>
+      <ion-select-option value="telugu" class="custom-option">Telugu</ion-select-option>   
+     </ion-select>
+     <ion-buttons slot="end" class="round">
+      <ion-button class="home">home</ion-button>
+      <ion-button class="home">about</ion-button>
+      <ion-button class="home">singup/login</ion-button>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content-with-background">
+  <div class="container">
+    <p class="border">Login or sign up with your number</p>
+    <ion-item class="custom-border">
+      <ion-select slot="start">
+        <ion-select-option value="+1">+1</ion-select-option>
+        <ion-select-option value="+44">+44</ion-select-option>
+        <ion-select-option value="+91">+91</ion-select-option>
+        <!-- Add more country codes as needed -->
+      </ion-select>
+      <!-- <ion-label position="stacked"></ion-label> -->
+      <ion-input type="tel" name="phoneNumber" [(ngModel)]="phoneNumber" placeholder="Enter Your Number" class="small-input" style="--ion-background-color: transparent;"></ion-input>
+    </ion-item>
+  </div>
+  <ion-button class="border1" shape="round">continue</ion-button>
+  <div class="border2">
+    <p>By signing up, you agree to our<a>Terms.</a> see how we use <br>your data in our <a>Privacy Policy</a></p>
+  </div>
+  <ion-img src="assets\icon\xsdss.jpeg" class="bottom-image"></ion-img>
+</ion-content>
