@@ -110,7 +110,8 @@ ion-content{
   }
 
   .border2{
-    padding-left: 65%;
+    padding-left: 55%;
+    text-align: center; /* Center the text */
   }
   
   /* Add this CSS to position the image at the bottom right */
@@ -132,3 +133,50 @@ ion-content{
 
   }
   
+  /* Styles for small screens (e.g., mobile) */
+@media screen and (max-width: 768px) {
+    .custom-border {
+      justify-content: center; /* Center the input field */
+      padding-left: 300px; /* Remove left padding */
+      margin-top: 10px;
+      width: 100%;
+      height: auto;
+    }
+  
+    .small-input {
+      width: 250%; /* Full width for small screens */
+      padding-right: 0; /* Remove right padding */
+    }
+  
+    .border {
+      padding-left: 340px; /* Remove left padding */
+      margin-top: 15px;
+    }
+  
+    .border1 {
+      padding-left: 395px; /* Remove left padding */
+      margin-top: 15px;
+      text-align: center; /* Center the button text */
+      color: blueviolet;
+    }
+  
+    .border2 {
+      padding-left: 260px; /* Remove left padding */
+      text-align: center; /* Center the text */
+    }
+  
+    .bottom-image {
+      width: 40%; /* Full width for small screens */
+      height: 30%; /* Maintain aspect ratio */
+      border-radius: 10px; /* Remove border radius */
+      left:60%; /* Position at the left for small screens */
+      bottom: auto; /* Reset bottom position */
+      top: 70%;
+      object-fit: cover;
+    }
+  }
+  
+  /* Styles for larger screens (e.g., desktop) */
+  @media screen and (min-width: 768px) {
+    /* Add styles for larger screens here */
+  }

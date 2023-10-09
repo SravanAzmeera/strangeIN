@@ -30,9 +30,10 @@
       <ion-input type="tel" name="phoneNumber" [(ngModel)]="phoneNumber" placeholder="Enter Your Number" class="small-input" style="--ion-background-color: transparent;"></ion-input>
     </ion-item>
   </div>
-  <ion-button class="border1" shape="round">continue</ion-button>
+  <ion-button class="border1" shape="round" (click)="openOTPModal()">continue</ion-button>
   <div class="border2">
     <p>By signing up, you agree to our<a>Terms.</a> see how we use <br>your data in our <a>Privacy Policy</a></p>
   </div>
   <ion-img src="assets\icon\xsdss.jpeg" class="bottom-image"></ion-img>
 </ion-content>
+

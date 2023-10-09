@@ -1,0 +1,60 @@
+<!-- <ion-header [translucent]="true" class="header">
+  <ion-toolbar>
+    <ion-img src="assets/icon/cc14a9e1-dd2b-44a5-812c-d1f9710393f3.jpeg" class="header-image" slot="start"></ion-img>
+    <ion-img src="assets/icon/5cc7aa4f-7468-4185-80ce-eb5fc46d32c3.jpeg" class="header-img" slot="start"></ion-img>
+    <ion-title></ion-title>
+    <ion-select class="custom-select" slot="start">
+      <ion-select-option value="english" class="custom-option">English</ion-select-option>
+      <ion-select-option value="hindi" class="custom-option">Hindi</ion-select-option>
+      <ion-select-option value="telugu" class="custom-option">Telugu</ion-select-option>   
+     </ion-select>
+     <ion-buttons slot="end" class="round">
+      <ion-button class="home">home</ion-button>
+      <ion-button class="home">about</ion-button>
+      <ion-button class="home">singup/login</ion-button>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true" class="border">
+  <!-- <ion-grid> -->
+    <!-- <ion-row> -->
+      <ion-col size="12">
+        <div class="otp-container">
+          <h2>Enter OTP</h2>
+          <p>Enter the 6-digit OTP sent to your number:</p>
+
+          <div class="otp-inputs">
+            <div class="otp-input">
+              <ion-input type="text" maxlength="1" [(ngModel)]="otpDigits[0]"></ion-input>
+            </div>
+            <div class="otp-input">
+              <ion-input type="text" maxlength="1" [(ngModel)]="otpDigits[1]"></ion-input>
+            </div>
+            <div class="otp-input">
+              <ion-input type="text" maxlength="1" [(ngModel)]="otpDigits[2]"></ion-input>
+            </div>
+            <div class="otp-input">
+              <ion-input type="text" maxlength="1" [(ngModel)]="otpDigits[3]"></ion-input>
+            </div>
+            <div class="otp-input">
+              <ion-input type="text" maxlength="1" [(ngModel)]="otpDigits[4]"></ion-input>
+            </div>
+            <div class="otp-input">
+              <ion-input type="text" maxlength="1" [(ngModel)]="otpDigits[5]"></ion-input>
+            </div>
+          </div>
+<br><br>
+          <ion-button shape="round" (click)="verifyOTP()">Verify OTP</ion-button>
+
+          <div class="otp-actions">
+            <ion-button fill="clear" (click)="changePassword()" class="change-password-button">Change number</ion-button>
+            <ion-button  fill="clear"  (click)="resendOTP()" class="resend-button">Resend OTP</ion-button>
+          </div>
+        </div>
+      </ion-col>
+    <!-- </ion-row> -->
+  <!-- </ion-grid> -->
+</ion-content>
+
+
