@@ -19,6 +19,7 @@
 <ion-content [fullscreen]="true" class="border">
   <!-- <ion-grid> -->
     <!-- <ion-row> -->
+    <div style="height: 200;  width: 200;">
       <ion-col size="12">
         <div class="otp-container">
           <h2>Enter OTP</h2>
@@ -44,6 +45,7 @@
               <ion-input type="text" maxlength="1" [(ngModel)]="otpDigits[5]"></ion-input>
             </div>
           </div>
+      
 <br><br>
           <ion-button shape="round" (click)="verifyOTP()">Verify OTP</ion-button>
 
@@ -53,6 +55,7 @@
           </div>
         </div>
       </ion-col>
+    </div>
     <!-- </ion-row> -->
   <!-- </ion-grid> -->
 </ion-content>

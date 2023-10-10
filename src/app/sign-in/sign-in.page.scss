@@ -1,0 +1,142 @@
+ion-content{
+    --ion-background-color: #141F3B;
+  
+  }
+  .header{
+      --ion-background-color: #141F3B;
+  }
+  ion-title{
+      color:aliceblue;
+  }
+  /* Define custom styles for the select */
+  .custom-select {
+      font-family: initial;
+      // font-size: 16px;
+      color: #fcf9f9; /* Change the text color */
+      // background-color: #f5f5f5; /* Change the background color */
+      // border: 2px solid #ccc; /* Change the border style */
+      // border-radius: 10px; /* Change the border radius */
+      // padding: 10px; /* Adjust the padding */
+    }
+    
+    /* Define custom styles for the select options */
+    .custom-option {
+      // font-family: 'Your Custom Font', sans-serif;
+      font-size: 16px;
+      color: #333; /* Change the text color */
+      background-color: #fff; /* Change the background color */
+      /* You can add more styles here for the options */
+    }
+  
+    .home{
+      color:#fff;
+      // border-radius: 50px; /* Adjust the border-radius as needed */
+      // padding: 10px 20px; /* Adjust padding as needed */
+    }
+  
+    /* Apply round border to ion-buttons slot */
+  ion-buttons.round {
+      // display: flex;
+      align-items: center; /* Center buttons vertically */
+    }
+    
+    /* Style ion-button elements inside the ion-buttons slot */
+    ion-buttons.round ion-button {
+      border-radius: 10px; /* Adjust the value to control the roundness */
+      margin: 0px 3px; /* Optional: Add margin to separate buttons */
+      // cursor: pointer; /* Change cursor to pointer on hover */
+      // transition: background-color 0.3s ease; /* Smooth color change transition */
+    }
+    
+    /* Change button color to light green on hover */
+    ion-buttons.round ion-button:hover {
+      color: lightgreen; /* Change to your desired color */
+    }
+  
+    /* CSS for styling the header image */
+  .header-image {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    object-fit: cover; /* Adjust the object-fit property as needed */
+    border-radius: 50%; /* Makes the image round */
+    margin-right: 10px; /* Adds some margin to separate the image from the title */
+  }
+  
+  .header-img{
+    width: 140px;
+  }
+
+  p {
+    color: white;
+    text-align: start;
+  }
+
+  /* Custom styles for the form */
+.container {
+  // text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.form-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-item {
+  margin-bottom: 20px;
+  align-content: start;
+  // --border-radius: 30px;
+  // background-color: #fcf9f9;
+  // border-color: antiquewhite;
+}
+
+/* Rounded Input Fields */
+.rounded-input {
+  --border-radius: 30px;
+  border-radius: var(--border-radius);
+  // background-color: #fff;
+  width: 240px;
+  height: auto;
+  border:1px solid white;
+}
+
+/* Three Separate Boxes for Date of Birth */
+.dob-input {
+  width: calc(93.63% - 1px);
+  height: -0px;
+  --border-radius: 20px;
+  border-radius: var(--border-radius);
+  // background-color: #fff;
+  margin-right: 8px;
+  // --border-radius: 30px; /* Remove border radius for separate boxes */
+  border: 1px solid white; /* Add a border to separate boxes */
+}
+
+/* "Add" Button */
+.add-button {
+  border-radius: 30px;  --border-radius: 30px;
+  border-radius: var(--border-radius);
+  // background-color: #007bff; /* Change to your desired color */
+  color: white;
+  margin-left: 8px;
+  border: 1px solid white; /* Add a border to separate boxes */
+
+}
+
+/* Submit Button */
+.submit-button {
+  margin-top: 20px;
+  text-align: start;
+  color: blueviolet;
+}
+
+/* Center Line Style */
+.center-line {
+  border-left: 2px solid #ccc; /* Adjust line width and color as needed */
+  height: 100%; /* Make the line extend to the full height of the row */
+  margin: 0 auto; /* Center the line horizontally */
+}

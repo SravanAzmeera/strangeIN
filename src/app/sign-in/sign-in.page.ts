@@ -7,9 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignInPage implements OnInit {
 
+  name: any;
+  email: any;
+  dobDay: any;
+  dobMonth: any;
+  dobYear: any;
+  gender: any;
+  relationship: any;
+
   constructor() { }
 
   ngOnInit() {
   }
+
+submitForm() {
+
+}
+
+addRelationship() {
+  
+}
 
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { OtpPage } from '../otp/otp.page';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -13,7 +14,7 @@ export class SignupPage implements OnInit {
   selectedCountryCode: string = '+1'; // Set a default country code if needed
 
   
-  constructor(private modalController: ModalController) { }
+  constructor(private modalController: ModalController, private route: Router) { }
 
   async openOTPModal() {
     const modal = await this.modalController.create({
@@ -31,6 +32,7 @@ export class SignupPage implements OnInit {
    // Implement your OTP verification logic here
    verifyOTP() {
     // Validate OTP and perform actions accordingly
+     this.route.navigate(['sign-in'])
   }
 
   // Implement OTP resend logic here

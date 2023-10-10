@@ -1,13 +1,100 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="header">
   <ion-toolbar>
-    <ion-title>signIn</ion-title>
+    <ion-img src="assets/icon/cc14a9e1-dd2b-44a5-812c-d1f9710393f3.jpeg" class="header-image" slot="start"></ion-img>
+    <ion-img src="assets/icon/5cc7aa4f-7468-4185-80ce-eb5fc46d32c3.jpeg" class="header-img" slot="start"></ion-img>
+    <ion-title></ion-title>
+    <ion-select class="custom-select" slot="start">
+      <ion-select-option value="english" class="custom-option">English</ion-select-option>
+      <ion-select-option value="hindi" class="custom-option">Hindi</ion-select-option>
+      <ion-select-option value="telugu" class="custom-option">Telugu</ion-select-option>   
+     </ion-select>
+     <ion-buttons slot="end" class="round">
+      <ion-button class="home">home</ion-button>
+      <ion-button class="home">about</ion-button>
+      <ion-button class="home">singup/login</ion-button>
+     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">signIn</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="content-with-background">
+  <div class="container">
+    <ion-title class="form-title">Create An Account</ion-title>
+    
+    <!-- Name Input -->
+    <p>Full Name</p>
+    <ion-item class="input-item">
+      <ion-input type="text" name="name" [(ngModel)]="name" class="rounded-input"></ion-input>
+    </ion-item>
+
+    <!-- Email Input -->
+    <p>Email</p>
+    <ion-item class="input-item">
+      <ion-input type="email" name="email" [(ngModel)]="email" class="rounded-input"></ion-input>
+    </ion-item>
+
+    <!-- Date of Birth Input -->
+    <p>Date Of Birth</p>
+    <ion-item class="input-item">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="1.5">
+            <ion-input type="number" name="dobDay" placeholder="DD" [(ngModel)]="dobDay" class="dob-input" color="light"></ion-input>
+          </ion-col>
+          <ion-col size="1.5">
+            <ion-input type="month" name="dobMonth" placeholder="MM" [(ngModel)]="dobMonth" class="dob-input"></ion-input>
+          </ion-col>
+          <ion-col size="1.5">
+            <ion-input type="number" name="dobYear" placeholder="YYYY" [(ngModel)]="dobYear" class="dob-input"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>   
+     </ion-item>
+
+    <!-- Gender Select -->
+    <p>Gender</p>
+    <ion-item class="input-item">
+      <ion-grid>
+        <ion-row>
+      <ion-radio-group [(ngModel)]="gender">
+        <ion-item>
+          <ion-label color="light">Man</ion-label>
+          <ion-radio slot="start" value="male"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label color="light">Woman</ion-label>
+          <ion-radio slot="start" value="female"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label color="light">Others</ion-label>
+          <ion-radio slot="start" value="other"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-row>
+    </ion-grid>
+    </ion-item>
+
+    <!-- Relationship Search Input -->
+    <p>Searching For</p>
+<ion-item class="input-item">
+  <ion-button slot="start" shape="round" fill="clear" class="add-button" (click)="addRelationship()" color="light">
+    <ion-icon name="add"></ion-icon> Add Relationship
+  </ion-button>
+</ion-item>
+
+    <ion-button class="submit-button" slot="start" shape="round" (click)="submitForm()">Continue</ion-button>
+  </div>
+
+
+    <!-- Center Line (Vertical Line) -->
+    <ion-col size="12" size-md="1">
+      <div class="center-line"></div>
+    </ion-col>
+
+
+  <ion-col size="12" size-md="6">
+    <!-- Right-side buttons go here -->
+    <!-- For example, you can add buttons for Photos, Videos, etc. -->
+  </ion-col>
+<!-- </ion-row>
+</ion-grid> -->
 </ion-content>
