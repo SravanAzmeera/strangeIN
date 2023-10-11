@@ -25,7 +25,14 @@ submitForm() {
 }
 
 addRelationship() {
-  
+
 }
 
+addPhoto() {
+
+}
+
+addVideo() {
+  
+}
 }

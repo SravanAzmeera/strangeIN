@@ -50,7 +50,7 @@
       </ion-grid>   
      </ion-item>
 
-    <!-- Gender Select -->
+     <!-- Gender Select -->
     <p>Gender</p>
     <ion-item class="input-item">
       <ion-grid>
@@ -86,15 +86,73 @@
 
 
     <!-- Center Line (Vertical Line) -->
-    <ion-col size="12" size-md="1">
+    <!-- <ion-col size="12" size-md="1"> -->
       <div class="center-line"></div>
+    <!-- </ion-col> -->
+
+
+    <ion-col size="12" size-md="6">
+      <p>Photos</p>
+      <ion-row>
+        <!-- First add icon -->
+        <ion-col size="6">
+          <ion-button fill="clear" (click)="addPhoto()">
+            <ion-icon color="light" name="add-circle"></ion-icon>
+          </ion-button>
+        </ion-col>
+        
+        <!-- Second add icon -->
+        <ion-col size="6">
+          <ion-button fill="clear" (click)="addPhoto()">
+            <ion-icon color="light" name="add-circle"></ion-icon>
+          </ion-button>
+        </ion-col>
+        
+        <!-- Third add icon -->
+        <ion-col size="6">
+          <ion-button fill="clear" (click)="addPhoto()">
+            <ion-icon color="light" name="add-circle"></ion-icon>
+          </ion-button>
+        </ion-col>
+        
+        <!-- Fourth add icon -->
+        <ion-col size="6">
+          <ion-button fill="clear" (click)="addPhoto()">
+            <ion-icon color="light" name="add-circle"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+    <p>videos</p>
+      <ion-row>
+        <!-- First add icon -->
+        <ion-col size="6">
+          <ion-button fill="clear" (click)="addVideo()">
+            <ion-icon color="light" name="add-circle"></ion-icon>
+          </ion-button>
+        </ion-col>
+        
+        <!-- Second add icon -->
+        <ion-col size="6">
+          <ion-button fill="clear" (click)="addVideo()">
+            <ion-icon color="light" name="add-circle"></ion-icon>
+          </ion-button>
+        </ion-col>
+        
+        <!-- Third add icon -->
+        <ion-col size="6">
+          <ion-button fill="clear" (click)="addVideo()">
+            <ion-icon color="light" name="add-circle"></ion-icon>
+          </ion-button>
+        </ion-col>
+        
+        <!-- Fourth add icon -->
+        <ion-col size="6">
+          <ion-button fill="clear" (click)="addVideo()">
+            <ion-icon color="light" name="add-circle"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
     </ion-col>
-
-
-  <ion-col size="12" size-md="6">
-    <!-- Right-side buttons go here -->
-    <!-- For example, you can add buttons for Photos, Videos, etc. -->
-  </ion-col>
-<!-- </ion-row>
-</ion-grid> -->
+    
 </ion-content>

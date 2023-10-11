@@ -135,8 +135,25 @@ ion-content{
 }
 
 /* Center Line Style */
+/* Center Line Style */
 .center-line {
-  border-left: 2px solid #ccc; /* Adjust line width and color as needed */
-  height: 100%; /* Make the line extend to the full height of the row */
-  margin: 0 auto; /* Center the line horizontally */
+  position: absolute;
+  left: 50%;
+  top: 250px;
+  bottom: 0;
+  width: 2px; /* Adjust the width as needed */
+  // height: 60px;
+  background-color: #fff; /* Adjust the line color */
+  transform: translateX(-50%);
 }
+
+ion-col ion-button {
+  border: 2px solid #fff; /* Add a white border around the buttons */
+  border-radius: 10%; /* Make the buttons round */
+  width: 60px; /* Set the width of the buttons */
+  height: 80px; /* Set the height of the buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

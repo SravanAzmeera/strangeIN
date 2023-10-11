@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, ModalOptions } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
 import { OtpPage } from '../otp/otp.page';
 import { Router } from '@angular/router';
 
@@ -14,9 +15,20 @@ export class SignupPage implements OnInit {
   selectedCountryCode: string = '+1'; // Set a default country code if needed
 
   
-  constructor(private modalController: ModalController, private route: Router) { }
+  constructor(private modalController: ModalController, private route: Router, private alertController: AlertController) { }
 
-  async openOTPModal() {
+async openOTPModal() {
+  if (!this.phoneNumber) {
+    // Display an alert or error message when the phoneNumber field is empty.
+    // You can customize the alert message as needed.
+    const alert = await this.alertController.create({
+      header: 'Error',
+      message: 'Please enter your phone number.',
+      buttons: ['OK'],
+    });
+    await alert.present();
+  } else {
+    // Proceed with opening the OTP modal if the phoneNumber is provided.
     const modal = await this.modalController.create({
       component: OtpPage,
       componentProps: {
@@ -25,6 +37,8 @@ export class SignupPage implements OnInit {
     });
     return await modal.present();
   }
+}
+
 
   ngOnInit() {
   }
