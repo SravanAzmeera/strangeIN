@@ -106,9 +106,10 @@ ion-content{
 
 /* Three Separate Boxes for Date of Birth */
 .dob-input {
-  width: calc(93.63% - 1px);
-  height: -0px;
-  --border-radius: 20px;
+  width: 37px;
+  height: 10px;
+  justify-content: space-evenly;
+  --border-radius: 10px;
   border-radius: var(--border-radius);
   // background-color: #fff;
   margin-right: 8px;
@@ -132,6 +133,7 @@ ion-content{
   margin-top: 20px;
   text-align: start;
   color: blueviolet;
+  padding-left: 90px;
 }
 
 /* Center Line Style */
@@ -157,3 +159,27 @@ ion-col ion-button {
   justify-content: center;
 }
 
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position:absolute;
+  z-index: 1;
+  top: 0;
+  // overflow-x:auto;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #141F3B;
+  top: 20%;
+}
+
+/* Control the right side */
+.right {
+  right: -5%;
+  background-color:#141F3B;
+  top: 20%;
+}

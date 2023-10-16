@@ -7,6 +7,7 @@
 ion-content{
     // --ion-background-color: transparent; /* Make input background transparent */
      padding-left: 80%;
+     --ng-otp-input-background-color:transparent;
 }
 
 .otp-container {
@@ -22,17 +23,42 @@ ion-content{
     align-items: center;
   }
   
-  .otp-input {
-    width: 60px;
-    margin: 0 5px;
-    text-align: center;
-    border: 2px solid black; /* Add a black border to each input box */
-    border-radius: 5px; /* Adjust border radius as needed */
-  }
+  /* Style each individual input box */
+.otp-input {
+  flex: 1; // allow input boxes to grow and fill available space
+  width: 2rem; /* Adjust the width of each input box as needed */
+  height: 2rem; /* Adjust the height of each input box as needed */
+  text-align: center; /* Center the text in each input box */
+  // border: 1px solid #000; /* Add a border for better visibility (customize as needed) */
+  margin: 0 0.2rem; /* Add spacing between input boxes */
+  border-radius: 0; /* Remove border radius if not needed */
+  --ion-background-color: transparent;
+  /* Set the input box background to transparent */
+}
+
+/* Remove input box outline/focus border (customize as needed) */
+.otp-input input:focus {
+  outline:ridge;
+  box-shadow: none;
+}
+
+.otp-input ion-input {
+  background-color: rgb(0, 0, 0);
+  color: #f51616;
+  --ion-background-color:transparent;
+}
+
+  // .otp-input {
+  //   width: 60px;
+  //   margin: 0 5px;
+  //   text-align: center;
+  //   border: 2px solid black; /* Add a black border to each input box */
+  //   border-radius: 5px; /* Adjust border radius as needed */
+  // }
   
-  .otp-input ion-input {
-    --ion-background-color: transparent; /* Make input background transparent */
-  }
+  // .otp-input ion-input {
+  //   --ion-background-color: transparent; /* Make input background transparent */
+  // }
   
   .otp-button {
     margin-top: 40px;

@@ -19,7 +19,7 @@
 <ion-content [fullscreen]="true" class="content-with-background">
   <div class="container">
     <ion-title class="form-title">Create An Account</ion-title>
-    
+    <div class="split left">
     <!-- Name Input -->
     <p>Full Name</p>
     <ion-item class="input-item">
@@ -75,22 +75,23 @@
 
     <!-- Relationship Search Input -->
     <p>Searching For</p>
-<ion-item class="input-item">
-  <ion-button slot="start" shape="round" fill="clear" class="add-button" (click)="addRelationship()" color="light">
-    <ion-icon name="add"></ion-icon> Add Relationship
-  </ion-button>
-</ion-item>
+  <ion-item class="input-item">
+    <ion-button slot="start" shape="round" fill="clear" class="add-button" (click)="addRelationship()" color="light">
+      <ion-icon name="add"></ion-icon> Add Relationship
+    </ion-button>
+  </ion-item>
+
 
     <ion-button class="submit-button" slot="start" shape="round" (click)="submitForm()">Continue</ion-button>
   </div>
-
+</div>
 
     <!-- Center Line (Vertical Line) -->
     <!-- <ion-col size="12" size-md="1"> -->
       <div class="center-line"></div>
     <!-- </ion-col> -->
 
-
+<div class="split right">
     <ion-col size="12" size-md="6">
       <p>Photos</p>
       <ion-row>
@@ -154,5 +155,5 @@
         </ion-col>
       </ion-row>
     </ion-col>
-    
+  </div>
 </ion-content>

@@ -24,3 +24,19 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+
+.otp-input-style {
+    font-size: 1.5rem;
+    background: var(--ion-color-transparent);
+    display: inline-block;
+    width: 6.5vh;
+    height: 6.5vh;
+    border-radius: 5px;
+}
+
+.otp-change {
+    width: 5vh;
+    height: 0vh;
+
+}

@@ -27,9 +27,9 @@
 
           <div class="otp-inputs">
             <div class="otp-input">
-              <ion-input type="text" maxlength="1" [(ngModel)]="otpDigits[0]"></ion-input>
+              <ng-otp-input (onInputChange)="onOtpChange($event)" [config]="config" style="background-color: transparent;"></ng-otp-input>
             </div>
-            <div class="otp-input">
+            <!-- <div class="otp-input">
               <ion-input type="text" maxlength="1" [(ngModel)]="otpDigits[1]"></ion-input>
             </div>
             <div class="otp-input">
@@ -43,13 +43,13 @@
             </div>
             <div class="otp-input">
               <ion-input type="text" maxlength="1" [(ngModel)]="otpDigits[5]"></ion-input>
-            </div>
+            </div> -->
           </div>
       
 <br><br>
           <ion-button shape="round" (click)="verifyOTP()">Verify OTP</ion-button>
 
-          <div class="otp-actions">
+          <div lines="none" class="otp-actions">
             <ion-button fill="clear" (click)="changePassword()" class="change-password-button">Change number</ion-button>
             <ion-button  fill="clear"  (click)="resendOTP()" class="resend-button">Resend OTP</ion-button>
           </div>

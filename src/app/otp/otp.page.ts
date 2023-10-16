@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, LoadingController, ToastController } from '@ionic/angular';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,13 +11,67 @@ import { ModalController } from '@ionic/angular';
 })
 export class OtpPage implements OnInit {
 
-    otpDigits: string[] = ['', '', '', '', '', '']; // Array to store OTP digits
+    // otpDigits: string[] = ['', '', '', '', '', ''];  // Array to store OTP digits
+    otp: any;
+    isLoading = false;
+    config = {
+      length: 6,
+      allowNumberOnly: true,
+      inputClass: 'otp-input-style'
+    };
+  form: any;
+  phoneNumber: any;
 
+  constructor(
+    private modalController: ModalController,
+    private auth: AuthService,
+    private router: Router,
+    public loadingctrl: LoadingController,
+    public toastctrl: ToastController,
 
-  constructor(private modalController: ModalController) {}
+    ) {}
 
   ngOnInit() {
   }
+
+  showLoader(msg: any){
+    if(!this.isLoading)this.isLoading = true;
+    return this.loadingctrl.create({
+      message: msg,
+      spinner: 'bubbles'
+    }).then(res => {
+      res.present().then(() =>{
+        if(!this.isLoading){
+         res.dismiss().then(() =>{
+          console.log('about presenting');
+         }) ;
+        }
+      })
+    })
+    .catch(e => {
+      this.isLoading
+      console.log(e);
+    })
+  }
+
+  hideLoader(){
+    if(this.isLoading) this.isLoading = false;
+    return this.loadingctrl.dismiss()
+    .then(() => console.log('dismissed'))
+    .catch(e => console.log(e));
+  }
+
+
+  joinOtpArray(otp: any){
+    if(!otp || otp == '') return 0;
+    const otpNew = otp.join('');
+    return otpNew;
+  }
+
+  onOtpChange(event: any) {
+    this.otp = event;
+    console.log(this.otp);
+  } 
 
 // Dismiss the modal
 dismissModal() {
@@ -23,19 +79,31 @@ dismissModal() {
 }
 
 // Verify the OTP
-verifyOTP() {
-  const otp = this.otpDigits.join(''); // Combine OTP digits
+async verifyOTP() {
+  try{
+    const response = await this.auth.verifyOtp(this.otp);
+    console.log(response);
+  } catch(e) {
+    console.log(e);
+  }
+  // const otp = this.otpDigits.join(''); // Combine OTP digits
   // Implement OTP verification logic here
 }
 
 // Resend OTP
-resendOTP() {
-  // Implement OTP resend logic here
+async resendOTP(){
+  try{
+    const response = await this.auth.openOTPModal('+91' + this.phoneNumber);
+    console.log(response);
+    }catch(e){
+    console.log(e);
+  }
 }
 
 // Change Password
 changePassword() {
   // Implement change password logic here
 }
+
 
 }

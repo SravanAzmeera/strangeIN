@@ -18,6 +18,8 @@
 
 <ion-content [fullscreen]="true" class="content-with-background">
   <div class="container">
+    <form [formGroup]="form">
+      <div id="openOTPModal-button"></div>
     <p class="border">Login or sign up with your number</p>
     <ion-item class="custom-border">
       <ion-select slot="start">
@@ -27,13 +29,15 @@
         <!-- Add more country codes as needed -->
       </ion-select>
       <!-- <ion-label position="stacked"></ion-label> -->
-      <ion-input type="tel" name="phoneNumber" [(ngModel)]="phoneNumber" placeholder="Enter Your Number" class="small-input" style="--ion-background-color: transparent;" required></ion-input>
+      <ion-input type="tel" name="phoneNumber" formControlName="phoneNumber" placeholder="Enter Your Number" class="small-input" style="--ion-background-color: transparent;" required></ion-input>
     </ion-item>
+   </form>
   </div>
   <ion-button class="border1" shape="round" (click)="openOTPModal()">continue</ion-button>
   <div class="border2">
     <p>By signing up, you agree to our<a>Terms.</a> see how we use <br>your data in our <a>Privacy Policy</a></p>
   </div>
+  <div id="recaptcha-container"></div>
   <ion-img src="assets\icon\xsdss.jpeg" class="bottom-image"></ion-img>
 </ion-content>
 
