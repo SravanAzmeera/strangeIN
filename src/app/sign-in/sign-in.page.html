@@ -34,44 +34,19 @@
 
     <!-- Date of Birth Input -->
     <p>Date Of Birth</p>
-    <ion-item class="input-item">
-      <ion-grid>
-        <ion-row>
-          <ion-col size="1.5">
-            <ion-input type="number" name="dobDay" placeholder="DD" [(ngModel)]="dobDay" class="dob-input" color="light"></ion-input>
-          </ion-col>
-          <ion-col size="1.5">
-            <ion-input type="month" name="dobMonth" placeholder="MM" [(ngModel)]="dobMonth" class="dob-input"></ion-input>
-          </ion-col>
-          <ion-col size="1.5">
-            <ion-input type="number" name="dobYear" placeholder="YYYY" [(ngModel)]="dobYear" class="dob-input"></ion-input>
-          </ion-col>
-        </ion-row>
-      </ion-grid>   
-     </ion-item>
+    <ion-item class="input-item1">
+      <ion-input type="date" shape="round" [(ngModel)]="dateofBirth"  class="p2" color="light"></ion-input>
+      <!-- <ion-input type="number" shape="round" [(ngModel)]="dobMonth"  class="p2" color="light"></ion-input> -->
+      <!-- <ion-input type="number" shape="round" [(ngModel)]="dobYear"  class="p2" color="light"></ion-input> -->
+    </ion-item>
 
      <!-- Gender Select -->
-    <p>Gender</p>
-    <ion-item class="input-item">
-      <ion-grid>
-        <ion-row>
-      <ion-radio-group [(ngModel)]="gender">
-        <ion-item>
-          <ion-label color="light">Man</ion-label>
-          <ion-radio slot="start" value="male"></ion-radio>
-        </ion-item>
-        <ion-item>
-          <ion-label color="light">Woman</ion-label>
-          <ion-radio slot="start" value="female"></ion-radio>
-        </ion-item>
-        <ion-item>
-          <ion-label color="light">Others</ion-label>
-          <ion-radio slot="start" value="other"></ion-radio>
-        </ion-item>
-      </ion-radio-group>
-    </ion-row>
-    </ion-grid>
-    </ion-item>
+     <p>Gender</p>
+<ion-item class="input-item">
+  <ion-button expand="full" shape="round" fill="clear" [ngClass]="{'selected-button': gender === 'male'}" (click)="selectGender('male')" color="light">Male</ion-button>
+  <ion-button expand="full" shape="round" fill="clear" [ngClass]="{'selected-button': gender === 'female'}" (click)="selectGender('female')" color="light">Female</ion-button>
+  <ion-button expand="full" shape="round" fill="clear" [ngClass]="{'selected-button': gender === 'other'}" (click)="selectGender('other')" color="light">Other</ion-button>
+</ion-item>
 
     <!-- Relationship Search Input -->
     <p>Searching For</p>
@@ -81,10 +56,34 @@
     </ion-button>
   </ion-item>
 
-
-    <ion-button class="submit-button" slot="start" shape="round" (click)="submitForm()">Continue</ion-button>
+  <div class="a1">
+    <ion-button class="submit-button" fill="clear" shape="round" (click)="submitForm()">Continue</ion-button>
   </div>
+  <p class="p1"><a>Already have an account? Log in</a></p>
 </div>
+</div>
+
+<!-- Display created user data if available
+<div *ngIf="createdUser">
+  <h2>Created User:</h2>
+  <p>Name: {{ createdUser.name }}</p>
+  <p>Email: {{ createdUser.email }}</p>
+  <p>Date of Birth: {{ createdUser.dateofBirth | date:'short' }}</p>
+  <p>Gender: {{ createdUser.gender }}</p>
+   <ion-button (click)="getUserData()">Get User Data</ion-button> -->
+<!-- </div> -->
+
+<!-- Display user data retrieved via GET request -->
+<!-- <div *ngIf="user">
+  <h2>Retrieved Users:</h2>
+  <div *ngFor="let user of users">
+    <p>Name: {{ user.name }}</p>
+    <p>Email: {{ user.email }}</p>
+    <p>Date of Birth: {{ user.dateofBirth | date:'short' }}</p>
+    <p>Gender: {{ user.gender }}</p>
+  </div>
+</div> -->
+
 
     <!-- Center Line (Vertical Line) -->
     <!-- <ion-col size="12" size-md="1"> -->
@@ -93,64 +92,64 @@
 
 <div class="split right">
     <ion-col size="12" size-md="6">
-      <p>Photos</p>
-      <ion-row>
+      <p class="photo">Photos</p>
+      <ion-row class="custom-row">
         <!-- First add icon -->
-        <ion-col size="6">
+        <ion-col size="5" class="custom-col">
           <ion-button fill="clear" (click)="addPhoto()">
-            <ion-icon color="light" name="add-circle"></ion-icon>
+            <ion-icon color="light" fill="clear" name="add-circle-outline" class="my-custom-icon"></ion-icon>
           </ion-button>
         </ion-col>
         
         <!-- Second add icon -->
-        <ion-col size="6">
+        <ion-col size="5" class="custom-col">
           <ion-button fill="clear" (click)="addPhoto()">
-            <ion-icon color="light" name="add-circle"></ion-icon>
+            <ion-icon color="light" name="add-circle-outline" class="my-custom-icon"></ion-icon>
           </ion-button>
         </ion-col>
         
         <!-- Third add icon -->
-        <ion-col size="6">
+        <ion-col size="5" class="custom-col">
           <ion-button fill="clear" (click)="addPhoto()">
-            <ion-icon color="light" name="add-circle"></ion-icon>
+            <ion-icon color="light" name="add-circle-outline" class="my-custom-icon"></ion-icon>
           </ion-button>
         </ion-col>
         
         <!-- Fourth add icon -->
-        <ion-col size="6">
+        <ion-col size="5" class="custom-col">
           <ion-button fill="clear" (click)="addPhoto()">
-            <ion-icon color="light" name="add-circle"></ion-icon>
+            <ion-icon color="light" name="add-circle-outline" class="my-custom-icon"></ion-icon>
           </ion-button>
         </ion-col>
       </ion-row>
 
-    <p>videos</p>
-      <ion-row>
+    <p class="photo">videos</p>
+      <ion-row class="custom-row">
         <!-- First add icon -->
-        <ion-col size="6">
+        <ion-col size="5" class="custom-col">
           <ion-button fill="clear" (click)="addVideo()">
-            <ion-icon color="light" name="add-circle"></ion-icon>
+            <ion-icon color="light" name="add-circle-outline" class="my-custom-icon"></ion-icon>
           </ion-button>
         </ion-col>
         
         <!-- Second add icon -->
-        <ion-col size="6">
+        <ion-col size="5" class="custom-col">
           <ion-button fill="clear" (click)="addVideo()">
-            <ion-icon color="light" name="add-circle"></ion-icon>
+            <ion-icon color="light" name="add-circle-outline" class="my-custom-icon"></ion-icon>
           </ion-button>
         </ion-col>
         
         <!-- Third add icon -->
-        <ion-col size="6">
+        <ion-col size="5" class="custom-col">
           <ion-button fill="clear" (click)="addVideo()">
-            <ion-icon color="light" name="add-circle"></ion-icon>
+            <ion-icon color="light" name="add-circle-outline" class="my-custom-icon"></ion-icon>
           </ion-button>
         </ion-col>
         
         <!-- Fourth add icon -->
-        <ion-col size="6">
+        <ion-col size="5" class="custom-col">
           <ion-button fill="clear" (click)="addVideo()">
-            <ion-icon color="light" name="add-circle"></ion-icon>
+            <ion-icon color="light" name="add-circle-outline" class="my-custom-icon"></ion-icon>
           </ion-button>
         </ion-col>
       </ion-row>

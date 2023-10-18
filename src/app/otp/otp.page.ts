@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./otp.page.scss'],
 })
 export class OtpPage implements OnInit {
+  
 
     // otpDigits: string[] = ['', '', '', '', '', ''];  // Array to store OTP digits
     otp: any;
@@ -21,6 +22,7 @@ export class OtpPage implements OnInit {
     };
   form: any;
   phoneNumber: any;
+  response: any;
 
   constructor(
     private modalController: ModalController,
@@ -34,7 +36,7 @@ export class OtpPage implements OnInit {
   ngOnInit() {
   }
 
-  showLoader(msg: any){
+ async showLoader(msg: any){
     if(!this.isLoading)this.isLoading = true;
     return this.loadingctrl.create({
       message: msg,
@@ -54,7 +56,7 @@ export class OtpPage implements OnInit {
     })
   }
 
-  hideLoader(){
+  async hideLoader(){
     if(this.isLoading) this.isLoading = false;
     return this.loadingctrl.dismiss()
     .then(() => console.log('dismissed'))
@@ -81,8 +83,20 @@ dismissModal() {
 // Verify the OTP
 async verifyOTP() {
   try{
-    const response = await this.auth.verifyOtp(this.otp);
+    let response = await this.auth.verifyOtp(this.otp);
     console.log(response);
+
+  if (this.response) {
+    this.router.navigate(['/sign-in']);
+  } else {
+      // Handle the case where OTP verification failed
+      const toast = await this.toastctrl.create({
+        message: 'OTP verification failed. Please try again.',
+        duration: 3000,
+      });
+      toast.present();
+    }
+
   } catch(e) {
     console.log(e);
   }

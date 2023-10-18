@@ -99,7 +99,8 @@ async openOTPModal() {
     const options: ModalOptions = {
       component: OtpPage,
       componentProps: {
-        phone: this.form.value.phoneNumber
+        phone: this.form.value.phoneNumber,
+        cssClass: 'otp-class'
       },
       //for iphone 
       //swipeToClose: true

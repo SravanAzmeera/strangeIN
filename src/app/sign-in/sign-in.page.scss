@@ -68,7 +68,8 @@ ion-content{
 
   p {
     color: white;
-    text-align: start;
+    // text-align: initial;
+    padding-left: 30px;
   }
 
   /* Custom styles for the form */
@@ -99,23 +100,46 @@ ion-content{
   --border-radius: 30px;
   border-radius: var(--border-radius);
   // background-color: #fff;
-  width: 240px;
-  height: auto;
+  width: 270px;
+  height: 1px;
   border:1px solid white;
 }
 
-/* Three Separate Boxes for Date of Birth */
-.dob-input {
-  width: 37px;
-  height: 10px;
-  justify-content: space-evenly;
-  --border-radius: 10px;
+ion-button{
+  --border-radius: 30px;
   border-radius: var(--border-radius);
-  // background-color: #fff;
-  margin-right: 8px;
-  // --border-radius: 30px; /* Remove border radius for separate boxes */
-  border: 1px solid white; /* Add a border to separate boxes */
+  border: 1px solid white;
 }
+
+.input-item1 {
+  margin-bottom: 20px;
+  align-content: start;
+  display: flex;
+}
+
+ion-input.p2 {
+  flex: 1;
+  // width: 40px;
+  // font-size: 14px; /* Adjust the font size as needed */
+  // height: 20px; /* Adjust the height as needed */
+  --border-radius: 20px;
+  border-radius: var(--border-radius);
+  border: 1px solid white;
+// --padding-start: 10px; /* Adjust the horizontal padding as needed */
+  // --padding-end: 10px; /* Adjust th  e horizontal padding as needed */
+}
+
+
+/* Three Separate Boxes for Date of Birth */
+// .dob-input {
+//   justify-content: space-evenly;
+//   --border-radius: 10px;
+//   border-radius: var(--border-radius);
+//   // background-color: #fff;
+//   margin-right: 8px;
+//   // --border-radius: 30px; /* Remove border radius for separate boxes */
+//   border: 1px solid white; /* Add a border to separate boxes */
+// }
 
 /* "Add" Button */
 .add-button {
@@ -123,19 +147,33 @@ ion-content{
   border-radius: var(--border-radius);
   // background-color: #007bff; /* Change to your desired color */
   color: white;
+  width: 60%;
   margin-left: 8px;
   border: 1px solid white; /* Add a border to separate boxes */
 
 }
 
-/* Submit Button */
-.submit-button {
-  margin-top: 20px;
-  text-align: start;
-  color: blueviolet;
-  padding-left: 90px;
+ion-icon .my-custom-icon {
+  font-weight: bold;
+  font-size: 204px; /* You can adjust the size as needed */
 }
 
+
+.submit-button{
+  background-color: blueviolet;
+  color: white;
+  // padding-left: 70px;
+  width: 40%;
+  text-align: center;
+}
+
+.a1 {
+  padding-left: 30px;
+}
+
+.p1{
+  font-weight: bold;
+}
 /* Center Line Style */
 /* Center Line Style */
 .center-line {
@@ -143,7 +181,7 @@ ion-content{
   left: 50%;
   top: 250px;
   bottom: 0;
-  width: 2px; /* Adjust the width as needed */
+  width: 4px; /* Adjust the width as needed */
   // height: 60px;
   background-color: #fff; /* Adjust the line color */
   transform: translateX(-50%);
@@ -152,11 +190,11 @@ ion-content{
 ion-col ion-button {
   border: 2px solid #fff; /* Add a white border around the buttons */
   border-radius: 10%; /* Make the buttons round */
-  width: 60px; /* Set the width of the buttons */
-  height: 80px; /* Set the height of the buttons */
+  width: 100px; /* Set the width of the buttons */
+  height: 120px; /* Set the height of the buttons */
   display: flex;
   align-items: center;
-  justify-content: center;
+  // justify-content: center;
 }
 
 /* Split the screen in half */
@@ -172,14 +210,46 @@ ion-col ion-button {
 
 /* Control the left side */
 .left {
-  left: 0;
+  left: 30px;
   background-color: #141F3B;
   top: 20%;
 }
 
 /* Control the right side */
 .right {
-  right: -5%;
+  right: -20px;
   background-color:#141F3B;
-  top: 20%;
+  top: 18%;
+}
+
+/* Reduce the space between columns in the custom-row */
+.custom-row {
+  gap: 5px; /* Adjust this value as needed */
+}
+
+/* Style for custom-col */
+.custom-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Style for custom-icon */
+.my-custom-icon {
+  font-size: 24px; /* Adjust the icon size as needed */
+  // border: 2px solid white; /* Add a border to the icons */
+  border-radius: 50%; /* Make the icons round */
+  padding: 5px; /* Add padding to the icons */
+  color: white; /* Icon color */
+}
+
+// .photo {
+//   padding-right: 60px;
+// }
+
+h2{
+  color: #fcf9f9;
+  align-content: center;
+  padding-left: 70px;
+  margin-top: 20%;
 }
