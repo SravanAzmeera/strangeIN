@@ -13,14 +13,12 @@ export class SignInPage implements OnInit {
   name: any;
   email: any;
   dateofBirth: any;
-  dobMonth: any;
-  dobYear: any;
   gender: any;
   relationship: any;  // You mentioned the relationship property, add it here if needed
-  dateofbirth: any;
   createdUser: any;  // to sdtore the created user data
-  users: any[] = [];
+  // users: any[] = [];
   user: any;
+  createdUserId: any;
 
   // Inject HttpClient into the component
   constructor(
@@ -28,7 +26,9 @@ export class SignInPage implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.getUserData();
+    // Initialize the user ID you want to retrieve
+    let docId = this.createdUserId
+    this.getUserData(docId);
   }
 
   // Function to submit user data to the API
@@ -45,7 +45,9 @@ submitForm() {
     (response) => {
     console.log('User created successfully', response);
     this.createdUser = response;
-  //  this.getUserData();
+    // Optionally, retrieve the user data after creation
+    console.log(this.createdUser.createdItem._id)
+    this.getUserData(this.createdUser.createdItem._id);
   },
   (error) => {
     console.log(error);
@@ -54,19 +56,19 @@ submitForm() {
 
 }
 
-// getUserData() {
-//   // Make a GET request to retrieve user data
-//   this.http.get('http://localhost:3000/strangeIn/user/${this.createdUser}').subscribe(
-//     (response: any) => {
-//       console.log('User data retrieved successfully', response);
-//       // Update the user data property with the retrieved data
-//       this.users = response;
-//     },
-//     (error) => {
-//       console.log(error);
-//     }
-//   );
-// }
+getUserData(docId: string) {
+  // Make a GET request to retrieve user data
+  this.http.get('http://localhost:3000/strangeIn/user/'+docId).subscribe(
+    (response: any) => {
+      console.log('User data retrieved successfully', response);
+      // Update the user data property with the retrieved data
+      this.user = response;
+    },
+    (error) => {
+      console.log(error);
+    }
+  );
+}
 
 addRelationship() {
 
@@ -85,9 +87,9 @@ selectGender(gender: any) {
   this.gender = gender; // Set the selected gender
 }
 
-selectDOB(dateofbirth: any){
-  this.dateofbirth = dateofbirth
+// selectDOB(dateofbirth: any){
+//   this.dateofbirth = dateofbirth
 
-}
+// }
 
 }

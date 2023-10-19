@@ -17,7 +17,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="content-with-background">
-  <div class="container">
+  <div *ngIf="!createdUser" class="container">
     <ion-title class="form-title">Create An Account</ion-title>
     <div class="split left">
     <!-- Name Input -->
@@ -63,34 +63,24 @@
 </div>
 </div>
 
-<!-- Display created user data if available
-<div *ngIf="createdUser">
-  <h2>Created User:</h2>
-  <p>Name: {{ createdUser.name }}</p>
-  <p>Email: {{ createdUser.email }}</p>
-  <p>Date of Birth: {{ createdUser.dateofBirth | date:'short' }}</p>
-  <p>Gender: {{ createdUser.gender }}</p>
-   <ion-button (click)="getUserData()">Get User Data</ion-button> -->
-<!-- </div> -->
+ <!-- Display retrieved user data -->
+ <div *ngIf="user">
+  <h2>Retrieved User:</h2><br>
+  <p>Name: {{ user.name }}</p>
+  <p>Email: {{ user.email }}</p>
+  <p>Date of Birth: {{ user.dateofBirth | date:'short' }}</p>
+  <p>Gender: {{ user.gender }}</p>
+</div>
 
-<!-- Display user data retrieved via GET request -->
-<!-- <div *ngIf="user">
-  <h2>Retrieved Users:</h2>
-  <div *ngFor="let user of users">
-    <p>Name: {{ user.name }}</p>
-    <p>Email: {{ user.email }}</p>
-    <p>Date of Birth: {{ user.dateofBirth | date:'short' }}</p>
-    <p>Gender: {{ user.gender }}</p>
-  </div>
-</div> -->
+
 
 
     <!-- Center Line (Vertical Line) -->
     <!-- <ion-col size="12" size-md="1"> -->
-      <div class="center-line"></div>
+      <div *ngIf="!createdUser"  class="center-line"></div>
     <!-- </ion-col> -->
 
-<div class="split right">
+<div *ngIf="!createdUser" class="split right">
     <ion-col size="12" size-md="6">
       <p class="photo">Photos</p>
       <ion-row class="custom-row">
