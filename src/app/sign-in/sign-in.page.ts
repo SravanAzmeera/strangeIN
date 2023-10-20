@@ -27,8 +27,8 @@ export class SignInPage implements OnInit {
 
   ngOnInit() {
     // Initialize the user ID you want to retrieve
-    let docId = this.createdUserId
-    this.getUserData(docId);
+    // let docId = this.createdUserId
+    // this.getUserData(docId);
   }
 
   // Function to submit user data to the API

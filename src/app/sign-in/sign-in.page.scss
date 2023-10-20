@@ -117,16 +117,13 @@ ion-button{
   display: flex;
 }
 
-ion-input.p2 {
-  flex: 1;
-  // width: 40px;
-  // font-size: 14px; /* Adjust the font size as needed */
-  // height: 20px; /* Adjust the height as needed */
-  --border-radius: 20px;
+.p2 {
+  --border-radius: 30px;
   border-radius: var(--border-radius);
-  border: 1px solid white;
-// --padding-start: 10px; /* Adjust the horizontal padding as needed */
-  // --padding-end: 10px; /* Adjust th  e horizontal padding as needed */
+  // background-color: #fff;
+  width: 270px;
+  height: 1px;
+  border:1px solid white;
 }
 
 
