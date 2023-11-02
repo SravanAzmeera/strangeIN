@@ -93,7 +93,7 @@ async openOTPModal() {
     console.log(this.form.value);
     console.log(this.phoneNumber)
 
-    const response = this.auth.openOTPModal('+91' + this.form.value.phoneNumber);
+    const response = await this.auth.openOTPModal('+91' + this.form.value.phoneNumber);
     console.log(response);
 
     const options: ModalOptions = {

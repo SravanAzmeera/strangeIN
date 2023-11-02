@@ -49,11 +49,15 @@ export class AuthService {
     try{
       if (!this.appVerifier) this.recaptcha();
      const result = await this.confirmationResult.confirm(otp);
+     console.log(otp);
      console.log(result);
      const user= result?.user;
      console.log(user);
+
+     // Check if the OTP verification was successful (user is not null)
+     return user !== null;
     }catch(e){
-      throw(e);
+      throw(e);  // You can handle this error further up the call stack.
     }
 }
 }

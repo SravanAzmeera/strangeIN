@@ -83,10 +83,11 @@ dismissModal() {
 // Verify the OTP
 async verifyOTP() {
   try{
-    let response = await this.auth.verifyOtp(this.otp);
-    console.log(response);
+    const isVerified = await this.auth.verifyOtp(this.otp);
+    console.log(this.otp)
+    console.log(isVerified);
 
-  if (this.response) {
+  if (isVerified) {
     this.router.navigate(['/sign-in']);
   } else {
       // Handle the case where OTP verification failed
