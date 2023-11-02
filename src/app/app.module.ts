@@ -27,7 +27,7 @@ import { environment } from 'src/environments/environment';
     HttpClientModule,
     CommonModule,
     // Configure Firebase within providers
-   provideFirebaseApp(() => initializeApp(environment.firebaseConfig)), provideAuth(() => getAuth())],
+   provideFirebaseApp(() => initializeApp(environment.firebase)), provideAuth(() => getAuth())],
     
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
