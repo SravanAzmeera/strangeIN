@@ -428,7 +428,7 @@ ion-content h1{
 
   ion-content h1{
     position: relative;
-    left: 3%;
+    left: 10%;
     right: inherit;
     align-content: center;
     font-weight: bold;
@@ -437,9 +437,22 @@ ion-content h1{
 
     .text-content p{
     width:110%;
-    margin-right: 10%;
+    margin-left: 14%;
     font-size: 13px;
   }
 
+  .text-content h2{
+    margin-left: 17%;
+
+  }
+
+  .text-content h3{
+    margin-left: 15%;
+  }
+
+  .button{
+    margin-left: 15%;
+
+  }
   
 }
