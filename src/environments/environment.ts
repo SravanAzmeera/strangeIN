@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
- firebase: {
+ firebaseConfig: {
   apiKey: "AIzaSyDt6NMHFFlC8b0maSde3bACdmZSZUzry0Y",
   authDomain: "strange-in.firebaseapp.com",
   databaseURL: "https://strange-in-default-rtdb.firebaseio.com",
