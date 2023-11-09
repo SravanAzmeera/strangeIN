@@ -1,5 +1,5 @@
 export const environment = {
-  firebase: {
+  firebaseConfig: {
     apiKey: "AIzaSyDt6NMHFFlC8b0maSde3bACdmZSZUzry0Y",
     authDomain: "strange-in.firebaseapp.com",
     databaseURL: "https://strange-in-default-rtdb.firebaseio.com",
