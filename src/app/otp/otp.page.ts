@@ -88,7 +88,8 @@ async verifyOTP() {
     console.log(isVerified);
 
   if (isVerified) {
-    this.router.navigate(['/sign-in']);
+    this.router.navigate(['./profile']);
+    this.dismissModal();
   } else {
       // Handle the case where OTP verification failed
       const toast = await this.toastctrl.create({

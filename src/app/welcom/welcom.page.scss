@@ -252,6 +252,180 @@ ion-content h1{
 /* Adjust styles for smaller screens */
 @media screen and (max-width: 768px) {
 
+//   .custom-select {
+//     font-family: initial;
+//     font-size: 16px;
+//     color: #fcf9f9; /* Change the text color */
+//     // background-color: #f5f5f5; /* Change the background color */
+//     // border: 2px solid #ccc; /* Change the border style */
+//     // border-radius: 10px; /* Change the border radius */
+//     // padding: 10px; /* Adjust the padding */
+//   }
+  
+//   /* Define custom styles for the select options */
+//   .custom-option {
+//     // font-family: 'Your Custom Font', sans-serif;
+//     font-size: 16px;
+//     color: #333; /* Change the text color */
+//     background-color: #dd0f0f; /* Change the background color */
+//     /* You can add more styles here for the options */
+//   }
+
+//   .home{
+//     color:#fff;
+//     font-size: 16px;
+//     padding-left: 20px;
+//     // border-radius: 50px; /* Adjust the border-radius as needed */
+//     // padding: 10px 20px; /* Adjust padding as needed */
+//   }
+
+//   /* Apply round border to ion-buttons slot */
+
+  
+//   /* Style ion-button elements inside the ion-buttons slot */
+//   ion-buttons.round ion-button {
+//     border-radius: 10px; /* Adjust the value to control the roundness */
+//     padding: -0px;
+//     // padding-left: 20px;
+//     // margin: 0px 3px; /* Optional: Add margin to separate buttons */
+//     // cursor: pointer; /* Change cursor to pointer on hover */
+//     // transition: background-color 0.3s ease; /* Smooth color change transition */
+//   }
+  
+//   /* Change button color to light green on hover */
+//   ion-buttons.round ion-button:hover {
+//     color: lightgreen; /* Change to your desired color */
+//   }
+
+//   /* CSS for styling the header image */
+// // .header-image {
+// //   width: 50px; /* Adjust the width as needed */
+// //   height: 50px; /* Adjust the height as needed */
+// //   object-fit: cover; /* Adjust the object-fit property as needed */
+// //   border-radius: 30%; /* Makes the image round */
+// //   margin-right: 10px; /* Adds some margin to separate the image from the title */
+// // }
+
+// // .header-img{
+// //  width: 144px;
+// // }
+
+ 
+
+//   .image-container h1 {
+//     left: 0; /* Center-align the heading */
+//     right: 0;
+//   }
+
+//   .overlay-text {
+//     position: absolute;
+//     top: 30%;
+//     right: 40%;
+//     transform: translate(-50%, -50%);
+//     background-color: rgba(255, 255, 255, 0.7); /* Optional: Add a semi-transparent background color */
+//     padding: 3%; /* Optional: Add padding to the text container */
+//     border-radius: 20px; /* Optional: Add rounded corners to the text container */
+//     box-shadow: 20px;
+//     line-height: 1.0;
+//   }
+
+//   .overlay-text h2 {
+//     font-size: 20px; /* Set the font size as needed */
+//     color: #000; /* Set the text color */
+//     // font-size: large;
+//     font-weight: bold;
+//   }
+  
+//   .overlay-text p {
+//     font-size: 20px;
+//   }
+
+//   ion-content h1{
+//     position: relative;
+//     left: 30%;
+//     right: inherit;
+//     align-content: center;
+//     font-weight: bold;
+    
+//   }
+
+//   .overlay-text h2 {
+//     font-size: 16px; /* Set the font size as needed */
+//     color: #000; /* Set the text color */
+//     // font-size: large;
+//     font-weight: bold;
+//   }
+  
+//   .overlay-text p {
+//     font-size: 8px;
+//   }
+
+//   .row-container {
+//     flex-direction: column;
+//     align-items: flex-start;
+//   }
+
+//   .row-set {
+//     width: 100%;
+//   }
+
+//   .main-container {
+//     flex-direction: column;
+//   }
+
+//   .text-content,
+//   .image-container1 {
+//     width: 100%;
+//     padding: 20px;
+//   }
+
+//   .overlay-image {
+//     top: 18px;
+//     left: 170px;
+//     width: 40%;
+//     transform: rotate(3deg);
+
+//   }
+
+//   .header-image {
+//     width: 60%; /* Adjust the width as needed */
+//     height: 80px; /* Adjust the height as needed */
+//     object-fit: cover; /* Adjust the object-fit property as needed */
+//     border-radius: 70%; /* Makes the image round */
+//     margin-right: 10px; /* Adds some margin to separate the image from the title */
+//   }
+  
+//   .header-img{
+//     width: 140px;
+//   }
+
+//   .text-content {
+//     flex: 1;
+//     padding: 5% 10%;
+//     line-height: 1.7;
+//     margin-top: 5%;
+//     margin-bottom: 5%;
+//   }
+  
+//   .text-content h2{
+//     font-weight: bold;
+//   }
+  
+//   .text-content h3{
+//     font-weight: 550;
+//     font-size: larger;
+//     width: 120%;
+//   }
+
+//   .text-content p{
+//     width:110%;
+//     margin-right: 10%;
+//     font-size: 13px;
+//   }
+  
+/* Adjust styles for smaller screens */
+@media screen and (max-width: 768px) {
+
  
 
   ion-buttons.round ion-button {
@@ -268,7 +442,7 @@ ion-content h1{
   .overlay-text {
     position: absolute;
     top: 30%;
-    right: 30%;
+    right: 35%;
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.7); /* Optional: Add a semi-transparent background color */
     padding: 10px; /* Optional: Add padding to the text container */
@@ -285,7 +459,7 @@ ion-content h1{
   }
   
   .overlay-text p {
-    font-size: 8px;
+    font-size: 12px;
   }
 
   .row-container {
@@ -308,8 +482,8 @@ ion-content h1{
   }
 
   .overlay-image {
-    top: 20px;
-    left: 270px;
+    top: 18px;
+    left: 280px;
     width: 34%;
   }
 
@@ -325,4 +499,118 @@ ion-content h1{
     width: 140px;
   }
 }
+}
  
+/* Media query for even smaller screens (adjust the max-width as needed) */
+@media (max-width: 480px) {
+  .header-image {
+    width: 50px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    // object-fit: cover; /* Adjust the object-fit property as needed */
+    border-radius: 30%; /* Makes the image round */
+    // margin-right: 10px; /* Adds some margin to separate the image from the title */
+  }
+  
+  .header-img{
+    width: 120px;
+    height: 30px;
+    object-fit: cover;
+  }
+/* Adjust styles for smaller screens */
+
+ 
+
+  ion-buttons.round ion-button {
+    padding: -0px;
+    margin: 0px 0px; /* Reduce the margin between buttons */
+  }
+
+
+  .image-container h1 {
+    left: 0; /* Center-align the heading */
+    right: 0;
+  }
+
+  .home{
+    font-size: 10px;
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 30%;
+    right: -10%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.7); /* Optional: Add a semi-transparent background color */
+    padding: 10px; /* Optional: Add padding to the text container */
+    border-radius: 20px; /* Optional: Add rounded corners to the text container */
+    box-shadow: 20px;
+    line-height: 1.0;
+  }
+
+  .overlay-text h2 {
+    font-size: 16px; /* Set the font size as needed */
+    color: #000; /* Set the text color */
+    // font-size: large;
+    font-weight: bold;
+  }
+  
+  .overlay-text p {
+    font-size: 10px;
+  }
+
+  .row-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .row-set {
+    width: 100%;
+  }
+
+  .main-container {
+    flex-direction: column;
+  }
+
+  .text-content,
+  .image-container1 {
+    width: 140%;
+    height: 20%;
+    padding: 20px;
+  }
+
+  .overlay-image {
+    top: 18px;
+    left: 170px;
+    width: 40%;
+    transform: rotate(3deg);
+  }
+
+  .header-image {
+    width: 60px; /* Adjust the width as needed */
+    height: 80px; /* Adjust the height as needed */
+    object-fit: cover; /* Adjust the object-fit property as needed */
+    border-radius: 70%; /* Makes the image round */
+    margin-right: 10px; /* Adds some margin to separate the image from the title */
+  }
+  
+  .header-img{
+    width: 140px;
+  }
+
+  ion-content h1{
+    position: relative;
+    left: 3%;
+    right: inherit;
+    align-content: center;
+    font-weight: bold;
+    
+  }
+
+    .text-content p{
+    width:110%;
+    margin-right: 10%;
+    font-size: 13px;
+  }
+
+  
+}

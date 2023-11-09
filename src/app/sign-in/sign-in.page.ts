@@ -41,7 +41,7 @@ submitForm() {
   };
 
   // Make a POST request to the API to create a new user
-  this.http.post('http://localhost:3000/strangeIn/user', userData).subscribe(
+  this.http.post('https://successful-bee-gown.cyclic.app/strangeIn/user', userData).subscribe(
     (response) => {
     console.log('User created successfully', response);
     this.createdUser = response;

@@ -1,0 +1,141 @@
+ion-content{
+    --ion-background-color: #141F3B;
+  
+  }
+  .header{
+      --ion-background-color: #141F3B;
+  }
+  ion-title{
+      color:aliceblue;
+  }
+  /* Define custom styles for the select */
+  .custom-select {
+      font-family: initial;
+      // font-size: 16px;
+      color: #fcf9f9; /* Change the text color */
+      // background-color: #f5f5f5; /* Change the background color */
+      // border: 2px solid #ccc; /* Change the border style */
+      // border-radius: 10px; /* Change the border radius */
+      // padding: 10px; /* Adjust the padding */
+    }
+    
+    /* Define custom styles for the select options */
+    .custom-option {
+      // font-family: 'Your Custom Font', sans-serif;
+      font-size: 16px;
+      color: #333; /* Change the text color */
+      background-color: #fff; /* Change the background color */
+      /* You can add more styles here for the options */
+    }
+  
+    .home{
+      color:#fff;
+      font-size: 10px;
+      // border-radius: 50px; /* Adjust the border-radius as needed */
+      // padding: 10px 20px; /* Adjust padding as needed */
+    }
+  
+    /* Apply round border to ion-buttons slot */
+  ion-buttons.round {
+      // display: flex;
+      align-items: center; /* Center buttons vertically */
+    }
+    
+    /* Style ion-button elements inside the ion-buttons slot */
+    ion-buttons.round ion-button {
+      border-radius: 10px; /* Adjust the value to control the roundness */
+      margin: 0px 3px; /* Optional: Add margin to separate buttons */
+      // cursor: pointer; /* Change cursor to pointer on hover */
+      // transition: background-color 0.3s ease; /* Smooth color change transition */
+    }
+    
+    /* Change button color to light green on hover */
+    ion-buttons.round ion-button:hover {
+      color: lightgreen; /* Change to your desired color */
+    }
+  
+    /* CSS for styling the header image */
+  .header-image {
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    object-fit: cover; /* Adjust the object-fit property as needed */
+    border-radius: 50%; /* Makes the image round */
+    margin-right: 10px; /* Adds some margin to separate the image from the title */
+  }
+  
+  .header-img{
+    width: 140px;
+  }
+
+//   p {
+//     color: white;
+//     // text-align: initial;
+//     padding-left: 30px;
+//   }
+
+/* Center the profile image and add spacing */
+// ion-avatar {
+//     text-align: center;
+//     margin-bottom: 10px;
+//   }
+  
+//   ion-avatar ion-img {
+//     width: 120px;
+//     height: 120px;
+//     border-radius: 50%;
+//     display: block;
+//     margin: 0 auto;
+//   }
+  
+  /* Style the profile details */
+  h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  p {
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  /* Style the username in a distinctive way */
+  p:nth-of-type(3) {
+    color: #007bff; /* Change the color to your preference */
+  }
+  
+  /* Style the labels (e.g., Date of Birth, Mobile Number) */
+  ion-label {
+    text-align: center;
+  }
+  
+  /* Add some spacing between profile items */
+  ion-item + ion-item {
+    margin-top: 20px;
+  }
+  
+  .profile-content {
+    --ion-background-color: white;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+  }
+  
+  .profile-info ion-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    border: none;
+  }
+  
+//   .profile-info ion-label {
+//     padding-left: 10px;
+//   }
