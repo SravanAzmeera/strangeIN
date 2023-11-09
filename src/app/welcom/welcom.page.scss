@@ -252,82 +252,82 @@ ion-content h1{
 
 
   
-/* Adjust styles for smaller screens */
-@media screen and (max-width: 768px) {
+// /* Adjust styles for smaller screens */
+// @media screen and (max-width: 768px) {
 
  
 
-  ion-buttons.round ion-button {
-    padding: -0px;
-    margin: 0px 0px; /* Reduce the margin between buttons */
-  }
+//   ion-buttons.round ion-button {
+//     padding: -0px;
+//     margin: 0px 0px; /* Reduce the margin between buttons */
+//   }
 
 
-  .image-container h1 {
-    left: 0; /* Center-align the heading */
-    right: 0;
-  }
+//   .image-container h1 {
+//     left: 0; /* Center-align the heading */
+//     right: 0;
+//   }
 
-  .overlay-text {
-    position: absolute;
-    top: 30%;
-    right: 35%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.7); /* Optional: Add a semi-transparent background color */
-    padding: 10px; /* Optional: Add padding to the text container */
-    border-radius: 20px; /* Optional: Add rounded corners to the text container */
-    box-shadow: 20px;
-    line-height: 1.0;
-  }
+//   .overlay-text {
+//     position: absolute;
+//     top: 30%;
+//     right: 35%;
+//     transform: translate(-50%, -50%);
+//     background-color: rgba(255, 255, 255, 0.7); /* Optional: Add a semi-transparent background color */
+//     padding: 10px; /* Optional: Add padding to the text container */
+//     border-radius: 20px; /* Optional: Add rounded corners to the text container */
+//     box-shadow: 20px;
+//     line-height: 1.0;
+//   }
 
-  .overlay-text h2 {
-    font-size: 16px; /* Set the font size as needed */
-    color: #000; /* Set the text color */
-    // font-size: large;
-    font-weight: bold;
-  }
+//   .overlay-text h2 {
+//     font-size: 16px; /* Set the font size as needed */
+//     color: #000; /* Set the text color */
+//     // font-size: large;
+//     font-weight: bold;
+//   }
   
-  .overlay-text p {
-    font-size: 12px;
-  }
+//   .overlay-text p {
+//     font-size: 12px;
+//   }
 
-  .row-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+//   .row-container {
+//     flex-direction: column;
+//     align-items: flex-start;
+//   }
 
-  .row-set {
-    width: 100%;
-  }
+//   .row-set {
+//     width: 100%;
+//   }
 
-  .main-container {
-    flex-direction: column;
-  }
+//   .main-container {
+//     flex-direction: column;
+//   }
 
-  .text-content,
-  .image-container1 {
-    max-width: 100%;
-    padding: 20px;
-  }
+//   .text-content,
+//   .image-container1 {
+//     max-width: 100%;
+//     padding: 20px;
+//   }
 
-  .overlay-image {
-    top: 18px;
-    left: 280px;
-    width: 34%;
-  }
+//   .overlay-image {
+//     top: 18px;
+//     left: 280px;
+//     width: 34%;
+//   }
 
-  .header-image {
-    width: 60px; /* Adjust the width as needed */
-    height: 80px; /* Adjust the height as needed */
-    object-fit: cover; /* Adjust the object-fit property as needed */
-    border-radius: 70%; /* Makes the image round */
-    margin-right: 10px; /* Adds some margin to separate the image from the title */
-  }
+//   .header-image {
+//     width: 60px; /* Adjust the width as needed */
+//     height: 80px; /* Adjust the height as needed */
+//     object-fit: cover; /* Adjust the object-fit property as needed */
+//     border-radius: 70%; /* Makes the image round */
+//     margin-right: 10px; /* Adds some margin to separate the image from the title */
+//   }
   
-  .header-img{
-    width: 140px;
-  }
-}
+//   .header-img{
+//     width: 140px;
+//   }
+// }
 
  
 /* Media query for even smaller screens (adjust the max-width as needed) */
