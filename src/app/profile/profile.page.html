@@ -23,18 +23,70 @@
       <ion-img [src]="profile.images"></ion-img>
     </ion-avatar>
    </div>
-   <ion-list class="profile-info">
-    <ion-item >
+
+   <div class="profile">
+    <ion-item>
+        <h2><strong>{{profile.fullName}}</strong></h2>
+    </ion-item>
+   </div>
+
+   <p class="DETAILS">DETAILS:</p>
+   <div class="profile">
+    <ion-item lines="none">
+      <h5>userName: {{profile.userName}}</h5>
+    </ion-item>
+   </div>
+
+   <div class="profile">
+    <ion-item lines="none">
+      <h5>dateofBirth: {{profile.dob}}</h5>
+    </ion-item>
+   </div>
+
+   <div class="profile">
+    <ion-item lines="none">
+      <h5>mobileNo: {{profile.mobileNo}}</h5>
+    </ion-item>
+   </div>
+
+   <div class="profile">
+    <ion-item lines="none">
+      <h5>gender: {{profile.gender}}</h5>
+    </ion-item>
+   </div>
+
+   <div>
+    <ion-item lines="none">
+      <h5>{{profile.aboutme}}</h5>
+    </ion-item>
+   </div>
+  <!-- <ion-list class="profile-info">
+   <ion-item>
     <ion-label>
-      <h2>{{ profile.fullName }}</h2>
-      <p>{{ profile.aboutme }}</p>
-      <p>Username: {{ profile.userName }}</p>
-      <p>Date of Birth: {{ profile.dob }}</p>
-      <p>Mobile Number: {{ profile.mobileNo }}</p>
-      <p>Gender: {{ profile.gender }}</p>
-      <p>More About Me: {{ profile.moreAboutMe.join(', ') }}</p>
-      <p>Interests: {{ profile.interests.join(', ') }}</p>
-    </ion-label>
-  </ion-item>
-</ion-list>
+      <div><h2>{{ profile.fullName }}</h2></div>
+      <div><p>{{ profile.aboutme }}</p></div>
+      <div><p>Username: {{ profile.userName }}</p></div>
+      <div><p>Date of Birth: {{ profile.dob }}</p></div>
+      <div><p>Mobile Number: {{ profile.mobileNo }}</p></div>
+      <div><p>Gender: {{ profile.gender }}</p></div>
+      <div><p>More About Me: {{ profile.moreAboutMe.join(', ') }}</p></div>
+      <div><p>Interests: {{ profile.interests.join(', ') }}</p></div> -->
+
+     <!-- Loop through moreAboutMe array -->
+        <!-- <div *ngFor="let item of profile.moreAboutMe">
+          <p>{{ item.height }}</p>
+          <p>{{ item.relationShipStatus }}</p> -->
+          <!-- Add other properties as needed -->
+        <!-- </div>       -->
+        
+        <!-- Loop through interests array -->
+        <!-- <div *ngFor="let item of profile.interests">
+          <p>{{ item.sports }}</p>
+          <p>{{ item.creativity }}</p> -->
+          <!-- Add other properties as needed -->
+        <!-- </div> -->
+
+    <!-- </ion-label>
+   </ion-item>
+  </ion-list> -->
 </ion-content>

@@ -1,5 +1,5 @@
 ion-content{
-    --ion-background-color: #141F3B;
+    --ion-background-color: white;
   
   }
   .header{
@@ -88,54 +88,29 @@ ion-content{
 //   }
   
   /* Style the profile details */
-  h2 {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-  p {
-    font-size: 18px;
-    text-align: center;
-    margin: 10px 0;
-  }
-  
-  /* Style the username in a distinctive way */
-  p:nth-of-type(3) {
-    color: #007bff; /* Change the color to your preference */
-  }
-  
-  /* Style the labels (e.g., Date of Birth, Mobile Number) */
-  ion-label {
-    text-align: center;
-  }
-  
-  /* Add some spacing between profile items */
-  ion-item + ion-item {
-    margin-top: 20px;
-  }
-  
   .profile-content {
-    --ion-background-color: white;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
   }
   
   .profile-image {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    margin: 20px auto;
-    display: block;
+    margin-bottom: 20px;
   }
   
-  .profile-info ion-item {
+ .DETAILS{
     display: flex;
-    align-items: flex-start;
-    padding: 10px;
-    border: none;
-  }
+    justify-content: center;
+    align-items: center;
+    color:rgb(46, 228, 167);
+ }
   
-//   .profile-info ion-label {
-//     padding-left: 10px;
-//   }

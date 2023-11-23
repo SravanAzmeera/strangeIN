@@ -35,6 +35,7 @@ export class SignupPage implements OnInit {
           Validators.maxLength(10),
         ]),
       });
+      
       }
 
      
@@ -89,9 +90,16 @@ async openOTPModal() {
     if(!this.form.valid) {
       console.log('otp working')
       this.form.markAllAsTouched();
-    }
-    console.log(this.form.value);
-    console.log(this.phoneNumber)
+    } else {
+      // Assign value to phoneNumber
+      this.phoneNumber = this.form.value.phoneNumber;
+
+      // Storing mobileNo in local storage
+      localStorage.setItem('phoneNumber', this.phoneNumber);
+      console.log(this.phoneNumber);
+    
+    // console.log(this.form.value);
+    // console.log(this.phoneNumber)
 
     const response = await this.auth.openOTPModal('+91' + this.form.value.phoneNumber);
     console.log(response);
@@ -111,6 +119,7 @@ async openOTPModal() {
     //if want see some data when you dissmiss
     const data: any = (await modal).onWillDismiss();
     console.log(data);
+  }
   }catch(e){
     console.log(e);
   }
@@ -118,8 +127,8 @@ async openOTPModal() {
 
 
   ngOnInit() {
+  
   }
 
 
 }
-
