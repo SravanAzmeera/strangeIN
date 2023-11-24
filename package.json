@@ -23,6 +23,8 @@
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
     "@ionic/angular": "^7.0.0",
+    "angular-analytics": "^1.0.0",
+    "angular-gtag": "^1.0.4",
     "firebase": "^10.4.0",
     "ionicons": "^7.0.0",
     "ng-otp-input": "^1.9.3",
