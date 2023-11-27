@@ -11,6 +11,7 @@ export class ProfilePage implements OnInit {
 
   profile: any; // Array to store user profiles
   phoneNumber: any;
+  UserProfile: any;
 
 
   constructor(

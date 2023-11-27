@@ -17,76 +17,132 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="profile-content">
-   <!-- Display user profiles here -->
-   <div class="profile">
-    <ion-avatar class="profile-image">
-      <ion-img [src]="profile.images"></ion-img>
-    </ion-avatar>
-   </div>
+  <!-- Display user profiles here -->
+  <h1>profile</h1>
+  <div class="profile">
+   <ion-avatar class="profile-image">
+     <ion-img [src]="profile.images"></ion-img>
+   </ion-avatar>
+  </div>
 
-   <div class="profile">
-    <ion-item>
-        <h2><strong>{{profile.fullName}}</strong></h2>
-    </ion-item>
-   </div>
-
-   <p class="DETAILS">DETAILS:</p>
-   <div class="profile">
-    <ion-item lines="none">
-      <h5> {{profile.userName}}</h5>
-    </ion-item>
-   </div>
-
-   <div class="profile">
-    <ion-item lines="none">
-      <h5> {{profile.dob}}</h5>
-    </ion-item>
-   </div>
-
-   <div class="profile">
-    <ion-item lines="none">
-      <h5>{{profile.mobileNo}}</h5>
-    </ion-item>
-   </div>
-
-   <div class="profile">
-    <ion-item lines="none">
-      <h5>{{profile.gender}}</h5>
-    </ion-item>
-   </div>
-
-   <div>
-    <ion-item lines="none">
-      <h5>{{profile.aboutme}}</h5>
-    </ion-item>
-   </div>
-  <!-- <ion-list class="profile-info">
+  <div class="profile">
    <ion-item>
-    <ion-label>
-      <div><h2>{{ profile.fullName }}</h2></div>
-      <div><p>{{ profile.aboutme }}</p></div>
-      <div><p>Username: {{ profile.userName }}</p></div>
-      <div><p>Date of Birth: {{ profile.dob }}</p></div>
-      <div><p>Mobile Number: {{ profile.mobileNo }}</p></div>
-      <div><p>Gender: {{ profile.gender }}</p></div>
-      <div><p>More About Me: {{ profile.moreAboutMe.join(', ') }}</p></div>
-      <div><p>Interests: {{ profile.interests.join(', ') }}</p></div> -->
-
-     <!-- Loop through moreAboutMe array -->
-        <!-- <div *ngFor="let item of profile.moreAboutMe">
-          <p>{{ item.height }}</p>
-          <p>{{ item.relationShipStatus }}</p> -->
-          <!-- Add other properties as needed -->
-        <!-- </div>       -->
-        
-        <!-- Loop through interests array -->
-        <!-- <div *ngFor="let item of profile.interests">
-          <p>{{ item.sports }}</p>
-          <p>{{ item.creativity }}</p> -->
-          <!-- Add other properties as needed -->
-        <!-- </div> -->
-
-    <!-- </ion-label>
+       <h2><strong>{{profile.fullName}}</strong></h2>
    </ion-item>
-  </ion-list> -->
+  </div>
+
+  <p class="DETAILS">DETAILS:</p>
+
+  <div class="profile" *ngIf="profile.userName">
+   <ion-item lines="none">
+     <h5>Username: {{profile.userName}}</h5>
+   </ion-item>
+  </div>
+
+  <div class="profile" *ngIf="profile.dob">
+   <ion-item lines="none">
+     <h5>Date of Birth: {{profile.dob}}</h5>
+   </ion-item>
+  </div>
+
+  <div class="profile" *ngIf="profile.mobileNo">
+   <ion-item lines="none">
+     <h5>Mobile Number: {{profile.mobileNo}}</h5>
+   </ion-item>
+  </div>
+
+  <div class="profile" *ngIf="profile.gender">
+   <ion-item lines="none">
+     <h5>Gender: {{profile.gender}}</h5>
+   </ion-item>
+  </div>
+
+  <div *ngIf="profile.aboutme">
+   <ion-item lines="none">
+     <h5>{{profile.aboutme}}</h5>
+   </ion-item>
+  </div>
+
+  <p class="DETAILS">moreAboutMe</p>
+  <!-- Loop through moreAboutMe array -->
+  <div class="profile" *ngIf="profile.height">
+    <ion-item lines="none">
+      <h5>{{profile.height}}</h5>
+    </ion-item>
+   </div>
+
+   <div class="profile" *ngIf="profile.yourFaith">
+    <ion-item lines="none">
+      <h5>{{profile.yourFaith}}</h5>
+    </ion-item>
+   </div>
+
+   <div class="profile" *ngIf="profile.yourMotherTongue">
+    <ion-item lines="none">
+      <h5>{{profile.yourMotherTongue}}</h5>
+    </ion-item>
+   </div>
+
+   <div class="profile" *ngIf="profile.doYouSmoke">
+    <ion-item lines="none">
+      <h5>{{profile.doYouSmoke}}</h5>
+    </ion-item>
+   </div>
+
+   <div class="profile" *ngIf="profile.yourDrinkingHabits">
+    <ion-item lines="none">
+      <h5>{{profile.yourDrinkingHabits}}</h5>
+    </ion-item>
+   </div>
+
+   <div class="profile" *ngIf="profile.yourStatus">
+    <ion-item lines="none">
+      <h5>{{profile.yourStatus}}</h5>
+    </ion-item>
+   </div>
+
+   <!-- <div class="profile" *ngIf="profile.sports">
+    <ion-item lines="none">
+      <h5>{{profile.sports}}</h5>
+    </ion-item>
+   </div> -->
+
+  <P class="DETAILS">Interests</P>
+  <!-- Loop through interests array -->
+  <div class="profile" *ngIf="profile.sports">
+    <ion-item lines="none">
+      <h5>{{profile.sports}}</h5>
+    </ion-item>
+   </div>
+
+   <div class="profile" *ngIf="profile.creativity">
+    <ion-item lines="none">
+      <h5>{{profile.creativity}}</h5>
+    </ion-item>
+   </div>
+
+   <div class="profile" *ngIf="profile.reading">
+    <ion-item lines="none">
+      <h5>{{profile.reading}}</h5>
+    </ion-item>
+   </div>
+
+   <div class="profile" *ngIf="profile.foodAndDrink">
+    <ion-item lines="none">
+      <h5>{{profile.foodAndDrink}}</h5>
+    </ion-item>
+   </div>
+
+   <div class="profile" *ngIf="profile.selfCare">
+    <ion-item lines="none">
+      <h5>{{profile.selfCare}}</h5>
+    </ion-item>
+   </div>
+
+   <div class="profile" *ngIf="profile.pets">
+    <ion-item lines="none">
+      <h5>{{profile.pets}}</h5>
+    </ion-item>
+   </div>
+
 </ion-content>
