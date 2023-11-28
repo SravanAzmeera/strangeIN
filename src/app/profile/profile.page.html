@@ -18,7 +18,8 @@
 
 <ion-content [fullscreen]="true" class="profile-content">
   <!-- Display user profiles here -->
-  <h1>profile</h1>
+  <h1>Profile</h1>
+  
   <div class="profile">
    <ion-avatar class="profile-image">
      <ion-img [src]="profile.images"></ion-img>
@@ -35,25 +36,25 @@
 
   <div class="profile1" *ngIf="profile.userName">
    <ion-item lines="none">
-     <h5>Username: {{profile.userName}}</h5>
+     <h5><strong>UserName:</strong> {{profile.userName}}</h5>
    </ion-item>
   </div>
 
   <div class="profile1" *ngIf="profile.dob">
    <ion-item lines="none">
-     <h5>Date of Birth: {{profile.dob}}</h5>
+     <h5><strong>DateOfBirth:</strong> {{profile.dob}}</h5>
    </ion-item>
   </div>
 
   <div class="profile1" *ngIf="profile.mobileNo">
    <ion-item lines="none">
-     <h5>Mobile Number: {{profile.mobileNo}}</h5>
+     <h5><strong>MobileNumber:</strong> {{profile.mobileNo}}</h5>
    </ion-item>
   </div>
 
   <div class="profile1" *ngIf="profile.gender">
    <ion-item lines="none">
-     <h5>Gender: {{profile.gender}}</h5>
+     <h5><strong>Gender:</strong> {{profile.gender}}</h5>
    </ion-item>
   </div>
 
@@ -68,37 +69,37 @@
   <!-- Loop through moreAboutMe array -->
   <div class="profile1" *ngIf="profile.height">
     <ion-item lines="none">
-      <h5>{{profile.height}}</h5>
+      <h5><strong>Height:</strong>{{profile.height}}</h5>
     </ion-item>
    </div>
 
    <div class="profile1" *ngIf="profile.yourFaith">
     <ion-item lines="none">
-      <h5>{{profile.yourFaith}}</h5>
+      <h5><strong>Faith:</strong>{{profile.yourFaith}}</h5>
     </ion-item>
    </div>
 
    <div class="profile1" *ngIf="profile.yourMotherTongue">
     <ion-item lines="none">
-      <h5>{{profile.yourMotherTongue}}</h5>
+      <h5><strong>MotherTongue:</strong>{{profile.yourMotherTongue}}</h5>
     </ion-item>
    </div>
 
    <div class="profile1" *ngIf="profile.doYouSmoke">
     <ion-item lines="none">
-      <h5>{{profile.doYouSmoke}}</h5>
+      <h5><strong>Smoking:</strong>{{profile.doYouSmoke}}</h5>
     </ion-item>
    </div>
 
    <div class="profile1" *ngIf="profile.yourDrinkingHabits">
     <ion-item lines="none">
-      <h5>{{profile.yourDrinkingHabits}}</h5>
+      <h5><strong>Drinking:</strong>{{profile.yourDrinkingHabits}}</h5>
     </ion-item>
    </div>
 
    <div class="profile1" *ngIf="profile.yourStatus">
     <ion-item lines="none">
-      <h5>{{profile.yourStatus}}</h5>
+      <h5><strong>Status:</strong>{{profile.yourStatus}}</h5>
     </ion-item>
    </div>
   </ion-card>
@@ -114,39 +115,52 @@
   <!-- Loop through interests array -->
   <div class="profile1" *ngIf="profile.sports">
     <ion-item lines="none">
-      <h5>{{profile.sports}}</h5>
+      <h5><strong>Sports:</strong>{{profile.sports}}</h5>
     </ion-item>
    </div>
 
    <div class="profile1" *ngIf="profile.creativity">
     <ion-item lines="none">
-      <h5>{{profile.creativity}}</h5>
+      <h5><strong>Creativity:</strong>{{profile.creativity}}</h5>
     </ion-item>
    </div>
 
    <div class="profile1" *ngIf="profile.reading">
     <ion-item lines="none">
-      <h5>{{profile.reading}}</h5>
+      <h5><strong>Reading:</strong>{{profile.reading}}</h5>
     </ion-item>
    </div>
 
    <div class="profile1" *ngIf="profile.foodAndDrink">
     <ion-item lines="none">
-      <h5>{{profile.foodAndDrink}}</h5>
+      <h5><strong>FoodAndDrink:</strong>{{profile.foodAndDrink}}</h5>
     </ion-item>
    </div>
 
    <div class="profile1" *ngIf="profile.selfCare">
     <ion-item lines="none">
-      <h5>{{profile.selfCare}}</h5>
+      <h5><strong>SelfCare:</strong>{{profile.selfCare}}</h5>
     </ion-item>
    </div>
 
    <div class="profile1" *ngIf="profile.pets">
     <ion-item lines="none">
-      <h5>{{profile.pets}}</h5>
+      <h5><strong>Pets:</strong>{{profile.pets}}</h5>
     </ion-item>
    </div>
   </ion-card>
 
+  <p class="DETAILS">Pictures</p>
+  <ion-card>
+    <ion-item *ngIf="profile.images">
+      <ion-img src="{{profile.images}}"></ion-img>
+    </ion-item>
+  </ion-card>
+
+  <p class="DETAILS">Videos</p>
+  <ion-card>
+    <ion-item *ngIf="profile.videos">
+      <video src="{{profile.videos}}"></video>
+    </ion-item>
+  </ion-card>
 </ion-content>

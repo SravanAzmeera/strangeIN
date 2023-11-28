@@ -136,10 +136,8 @@ ion-content{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    border: 1px solid black;
     justify-items: center;
     align-self: center;
-    padding: 20%;
   }
   
   /* Different background colors for each ion-card */
@@ -151,77 +149,76 @@ ion-content{
   background-color: #91b836;
 }
 
-//  /* Different background colors for each item */
-// .profile1:nth-child(1) {
-//     background-color: #277a94;
-//   }
+ /* Different background colors for each item */
+.profile1:nth-child(1) {
+    background-color: #277a94;
+  }
   
-//   .profile1:nth-child(2) {
-//     background-color: #8faa2d;
-//   }
+  .profile1:nth-child(2) {
+    background-color: #8faa2d;
+  }
   
-//   .profile1:nth-child(3) {
-//     background-color: #cc99ff;
-//   }
+  .profile1:nth-child(3) {
+    background-color: #cc99ff;
+  }
   
-//   .profile1:nth-child(4) {
-//     background-color: #99ffcc;
-//   }
+  .profile1:nth-child(4) {
+    background-color: #99ffcc;
+  }
   
-//   .profile1:nth-child(5) {
-//     background-color: #ffb366;
-//   }
+  .profile1:nth-child(5) {
+    background-color: #ffb366;
+  }
   
-//   .profile1:nth-child(6) {
-//     background-color: #c2f0c2;
-//   }
+  .profile1:nth-child(6) {
+    background-color: #c2f0c2;
+  }
   
-//   .profile1:nth-child(7) {
-//     background-color: #5759d3;
-//   }
+  .profile1:nth-child(7) {
+    background-color: #5759d3;
+  }
 
-//   .profile1:nth-child(8) {
-//     background-color: #7c305f;
-//   }
+  .profile1:nth-child(8) {
+    background-color: #7c305f;
+  }
   /* Sample text color - customize as needed */
 .profile1 h5 {
     border-radius: 10px;
     color: #333;
-    background-color: #e0e0e0; /* Default background color */
     padding: 8px; /* Add padding for better visibility */
   }
   
-  /* Different background colors for each .profile1 h5 */
-  .profile1:nth-child(1) h5 {
-    background-color: #e0e0e0; /* Set background color for the first element */
-  }
+  // /* Different background colors for each .profile1 h5 */
+  // .profile1:nth-child(1) h5 {
+  //   background-color: #e0e0e0; /* Set background color for the first element */
+  // }
   
-  .profile1:nth-child(2) h5 {
-    background-color: #b3b3b3; /* Set background color for the second element */
-  }
+  // .profile1:nth-child(2) h5 {
+  //   background-color: #b3b3b3; /* Set background color for the second element */
+  // }
   
-  .profile1:nth-child(3) h5 {
-    background-color: #cc99ff; /* Set background color for the third element */
-  }
+  // .profile1:nth-child(3) h5 {
+  //   background-color: #cc99ff; /* Set background color for the third element */
+  // }
   
-  .profile1:nth-child(4) h5 {
-    background-color: #99ffcc; /* Set background color for the fourth element */
-  }
+  // .profile1:nth-child(4) h5 {
+  //   background-color: #99ffcc; /* Set background color for the fourth element */
+  // }
   
-  .profile1:nth-child(5) h5 {
-    background-color: #ffb366; /* Set background color for the fifth element */
-  }
+  // .profile1:nth-child(5) h5 {
+  //   background-color: #ffb366; /* Set background color for the fifth element */
+  // }
   
-  .profile1:nth-child(6) h5 {
-    background-color: #c2f0c2; /* Set background color for the sixth element */
-  }
+  // .profile1:nth-child(6) h5 {
+  //   background-color: #c2f0c2; /* Set background color for the sixth element */
+  // }
   
-  .profile1:nth-child(7) h5 {
-    background-color: #5759d3; /* Set background color for the seventh element */
-  }
+  // .profile1:nth-child(7) h5 {
+  //   background-color: #5759d3; /* Set background color for the seventh element */
+  // }
   
-  .profile1:nth-child(8) h5 {
-    background-color: #7c305f; /* Set background color for the eighth element */
-  }
+  // .profile1:nth-child(8) h5 {
+  //   background-color: #7c305f; /* Set background color for the eighth element */
+  // }
   
   
