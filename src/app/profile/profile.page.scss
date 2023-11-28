@@ -106,16 +106,85 @@ ion-content{
     border-radius: 50%;
     margin-bottom: 20px;
   }
+
+  .profile1 {
+    flex: 0 0 48%; /* Adjust the percentage as needed */
+    margin: 1%;
+    // background-color: #e0e0e0; /* Set the background color */
+    // border-radius: 10px; /* Set the border radius */
+    padding: 5px;
+    align-self: center;
+    text-align: center;
+  }
   
- .DETAILS{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:rgb(46, 228, 167);
- }
+  .DETAILS {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
   
  h1{
     color:rgb(224, 203, 20);
     // margin-left: 20%;
     font-weight: bold;
  }
+
+ .profile-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  h5{
+    align-self: center;
+    text-align: center;
+  }
+  /* Different background colors for each ion-card */
+.profile-card:nth-child(1) {
+  background-color: #e0e0e0;
+}
+
+.profile-card:nth-child(2) {
+  background-color: #b3b3b3;
+}
+
+ /* Different background colors for each item */
+.profile1:nth-child(1) {
+    background-color: #e0e0e0;
+  }
+  
+  .profile1:nth-child(2) {
+    background-color: #b3b3b3;
+  }
+  
+  .profile1:nth-child(3) {
+    background-color: #cc99ff;
+  }
+  
+  .profile1:nth-child(4) {
+    background-color: #99ffcc;
+  }
+  
+  .profile1:nth-child(5) {
+    background-color: #ffb366;
+  }
+  
+  .profile1:nth-child(6) {
+    background-color: #c2f0c2;
+  }
+  
+  .profile1:nth-child(7) {
+    background-color: #5759d3;
+  }
+
+  .profile1:nth-child(8) {
+    background-color: #7c305f;
+  }
+  /* Sample text color - customize as needed */
+  .profile1 h5 {
+    color: #333;
+  }
+  
