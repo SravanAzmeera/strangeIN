@@ -2,7 +2,7 @@ ion-content{
     --ion-background-color: transparent;
     background: var(--background) center/cover no-repeat;
     position: relative;  }
-  .header{
+    .header{
       --ion-background-color: #141F3B;
   }
   ion-title{
@@ -21,7 +21,7 @@ ion-content{
     
     /* Define custom styles for the select options */
     .custom-option {
-      font-family: 'Your Custom Font', sans-serif;
+      // font-family: 'Your Custom Font', sans-serif;
       font-size: 16px;
       color: #333; /* Change the text color */
       background-color: #fff; /* Change the background color */
@@ -30,22 +30,23 @@ ion-content{
   
     .home{
       color:#fff;
+      font-size: 15px;
       // border-radius: 50px; /* Adjust the border-radius as needed */
-      // padding: 10px 20px; /* Adjust padding as needed */
+      padding: -0px; /* Adjust padding as needed */
     }
   
     /* Apply round border to ion-buttons slot */
   ion-buttons.round {
-      display: flex;
+      // display: flex;
       align-items: center; /* Center buttons vertically */
     }
     
     /* Style ion-button elements inside the ion-buttons slot */
     ion-buttons.round ion-button {
-      border-radius: 30px; /* Adjust the value to control the roundness */
-      margin: 0px 5px; /* Optional: Add margin to separate buttons */
-      cursor: pointer; /* Change cursor to pointer on hover */
-      transition: background-color 0.3s ease; /* Smooth color change transition */
+      border-radius: 10px; /* Adjust the value to control the roundness */
+      margin: 0px 3px; /* Optional: Add margin to separate buttons */
+      // cursor: pointer; /* Change cursor to pointer on hover */
+      // transition: background-color 0.3s ease; /* Smooth color change transition */
     }
     
     /* Change button color to light green on hover */
@@ -333,19 +334,19 @@ ion-content h1{
  
 /* Media query for even smaller screens (adjust the max-width as needed) */
 @media (max-width: 480px) {
-  .header-image {
-    width: 30px; /* Adjust the width as needed */
-    height: 30px; /* Adjust the height as needed */
-    // object-fit: cover; /* Adjust the object-fit property as needed */
-    border-radius: 30%; /* Makes the image round */
-    // margin-right: 10px; /* Adds some margin to separate the image from the title */
-  }
+  // .header-image {
+  //   width: 30px; /* Adjust the width as needed */
+  //   height: 30px; /* Adjust the height as needed */
+  //   // object-fit: cover; /* Adjust the object-fit property as needed */
+  //   border-radius: 30%; /* Makes the image round */
+  //   // margin-right: 10px; /* Adds some margin to separate the image from the title */
+  // }
   
-  .header-img{
-    width: 120px;
-    height: 30px;
-    object-fit: cover;
-  }
+  // .header-img{
+  //   width: 120px;
+  //   height: 30px;
+  //   object-fit: cover;
+  // }
 /* Adjust styles for smaller screens */
 
  
