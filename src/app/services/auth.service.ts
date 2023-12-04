@@ -60,4 +60,17 @@ export class AuthService {
       throw(e);  // You can handle this error further up the call stack.
     }
 }
+
+isAuthenticated(): boolean {
+  // Implement your authentication check logic here
+  // Return true if authenticated, false otherwise
+  // For example, you can check if the user is signed in or if a token exists
+  return !!this.fireAuth.currentUser; // This example assumes the user is authenticated if there is a current user
+}
+
+logout() {
+  // Perform logout actions (e.g., clear authentication token, reset user state)
+  // Example: this.fireAuth.signOut(); // Use the appropriate method for your authentication system
+}
+
 }

@@ -11,7 +11,8 @@
      <ion-buttons slot="end" class="round">
       <ion-button class="home" routerLink="/welcom">home</ion-button>
       <ion-button class="home" routerLink="/profile">about</ion-button>
-      <ion-button class="home" routerLink="/signup">login</ion-button>
+      <ion-button *ngIf="isLoggedIn" class="home" (click)="logout()">logout</ion-button>
+      <ion-button *ngIf="!isLoggedIn" class="home" routerLink="/signup">login</ion-button>
      </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -60,7 +61,7 @@
 
   <div class="profile1" *ngIf="profile.aboutme">
    <ion-item lines="none">
-     <h5>{{profile.aboutme}}</h5>
+     <h5><strong>AboutMe: </strong>{{profile.aboutme}}</h5>
    </ion-item>
   </div>
 
@@ -151,16 +152,16 @@
   </ion-card>
 
   <p class="DETAILS">Pictures</p>
-  <ion-card>
-    <ion-item *ngIf="profile.images">
-      <ion-img src="{{profile.images}}"></ion-img>
+  <ion-card class="ion-text-center">
+    <ion-item *ngIf="profile.images" class="image-item">
+      <ion-img [src]="profile.images" class="full-width"></ion-img>
     </ion-item>
   </ion-card>
 
   <p class="DETAILS">Videos</p>
   <ion-card>
     <ion-item *ngIf="profile.videos">
-      <video src="{{profile.videos}}"></video>
+      <video src="{{profile.videos}}" controls></video>
     </ion-item>
   </ion-card>
 </ion-content>
