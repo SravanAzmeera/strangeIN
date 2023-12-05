@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { Auth, RecaptchaVerifier, signInWithPhoneNumber } from '@angular/fire/auth';
 // import firebase from 'firebase/app';
 
@@ -7,7 +7,7 @@ import { Auth, RecaptchaVerifier, signInWithPhoneNumber } from '@angular/fire/au
   providedIn: 'root'
 })
 export class AuthService {
- 
+
   
   // confirmationResult: firebase.auth.ConfirmationResult;
 
@@ -16,6 +16,8 @@ export class AuthService {
   confirmationResult: any;
   RecaptchaVerifier: any;
   signInWithPhoneNumber: any;
+
+  authenticationRequired = new EventEmitter<void>();
 
   constructor(private fireAuth: Auth) { }
 

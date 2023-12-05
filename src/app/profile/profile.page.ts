@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http'; // Import HttpClient
 import { Router, ActivatedRoute } from '@angular/router';
 import { AuthService } from '../services/auth.service';
+import { AlertController } from '@ionic/angular'; // Import AlertController
+
 
 @Component({
   selector: 'app-profile',
@@ -15,13 +17,15 @@ export class ProfilePage implements OnInit {
   UserProfile: any;
   isLoggedIn: boolean = true; // Set this based on your authentication state
 
+  
 
 
   constructor(
     private http: HttpClient,
     private route: Router,
     private router: ActivatedRoute,
-    private auth : AuthService
+    private auth : AuthService,
+    private alertController: AlertController
   ) { 
     this.phoneNumber = localStorage.getItem('phoneNumber');
     console.log(this.phoneNumber);
@@ -30,7 +34,12 @@ export class ProfilePage implements OnInit {
   }
 
   ngOnInit() {
-    this.getProfiles(); // Fetch profiles when the page loads 9502422980
+    // Check authentication status and user data when the page loads
+    if (!this.isLoggedIn || !this.hasUserData()) {
+      this.presentSignInAlert();
+    } else {
+      this.getProfiles();
+    }
   }
 
   getProfiles() {
@@ -42,8 +51,13 @@ export class ProfilePage implements OnInit {
       },
       (error) => {
         console.error('Error fetching profiles:', error);
+        this.showLoginAlert();
       }
     );
+  } 
+
+  home(){
+   this.route.navigate(['welcom']);
   } 
 
   checkAuthenticationStatus(): boolean {
@@ -51,15 +65,49 @@ export class ProfilePage implements OnInit {
     return this.auth.isAuthenticated();
   }
 
-
-  home(){
-   this.route.navigate(['welcom']);
-  } 
-
   async logout() {
     // Perform logout actions using your AuthService
     this.auth.logout();
     // Navigate to the login page or any other desired page
     this.route.navigate(['/login']); // Adjust the route accordingly
   }
+
+  hasUserData(): boolean {
+    // Implement logic to check if the user has necessary data
+    return !!this.phoneNumber; // Example: Check if phone number is available
+  }
+
+  async presentSignInAlert() {
+    const alert = await this.alertController.create({
+      header: 'Alert',
+      message: 'Please sign in to access the profile page.',
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+
+    this.route.navigate(['/login']);
+  }
+
+  async showLoginAlert() {
+    const alert = await this.alertController.create({
+      header: 'Alert',
+      message: 'Please download the app and sign-in.',
+      buttons: [
+        {
+        text: 'Okay',
+        handler: () => {
+          console.log('Confirm Okay');
+           //you can write your code or redirection 
+           // sample redirection code 
+           this.route.navigate(['/welcom'])
+        }
+        }
+      ],
+
+    });
+    await alert.present();
+  
+  }
+
 }
