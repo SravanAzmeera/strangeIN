@@ -119,6 +119,10 @@ async openOTPModal() {
     //if want see some data when you dissmiss
     const data: any = (await modal).onWillDismiss();
     console.log(data);
+
+    // if (this.auth.hasProfileData()) {
+    //   this.route.navigate(['/welcom']);
+    // }
   }
   }catch(e){
     console.log(e);

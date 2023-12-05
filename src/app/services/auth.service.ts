@@ -75,4 +75,8 @@ logout() {
   // Example: this.fireAuth.signOut(); // Use the appropriate method for your authentication system
 }
 
+hasProfileData(): boolean {
+  return !!localStorage.getItem('phoneNumber');
+}
+
 }

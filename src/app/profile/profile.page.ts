@@ -35,8 +35,8 @@ export class ProfilePage implements OnInit {
 
   ngOnInit() {
     // Check authentication status and user data when the page loads
-    if (!this.isLoggedIn || !this.hasUserData()) {
-      this.presentSignInAlert();
+    if (!this.isLoggedIn || !this.auth.hasProfileData()) {
+      this.showLoginAlert();
     } else {
       this.getProfiles();
     }
@@ -70,23 +70,6 @@ export class ProfilePage implements OnInit {
     this.auth.logout();
     // Navigate to the login page or any other desired page
     this.route.navigate(['/login']); // Adjust the route accordingly
-  }
-
-  hasUserData(): boolean {
-    // Implement logic to check if the user has necessary data
-    return !!this.phoneNumber; // Example: Check if phone number is available
-  }
-
-  async presentSignInAlert() {
-    const alert = await this.alertController.create({
-      header: 'Alert',
-      message: 'Please sign in to access the profile page.',
-      buttons: ['OK'],
-    });
-
-    await alert.present();
-
-    this.route.navigate(['/login']);
   }
 
   async showLoginAlert() {
