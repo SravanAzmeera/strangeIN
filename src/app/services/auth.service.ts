@@ -64,15 +64,15 @@ export class AuthService {
 }
 
 isAuthenticated(): boolean {
-  // Implement your authentication check logic here
-  // Return true if authenticated, false otherwise
   // For example, you can check if the user is signed in or if a token exists
   return !!this.fireAuth.currentUser; // This example assumes the user is authenticated if there is a current user
 }
 
 logout() {
-  // Perform logout actions (e.g., clear authentication token, reset user state)
-  // Example: this.fireAuth.signOut(); // Use the appropriate method for your authentication system
+  // Clear user data and sign out
+  localStorage.removeItem('phoneNumber'); // Clear any user-specific data
+  console.log(localStorage);
+  this.fireAuth.signOut(); // Sign out the user
 }
 
 hasProfileData(): boolean {

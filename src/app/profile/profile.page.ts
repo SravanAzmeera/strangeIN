@@ -44,7 +44,7 @@ export class ProfilePage implements OnInit {
 
   getProfiles() {
     console.log(this.phoneNumber);
-    this.http.get('http://localhost:3000/Signup/+91'+this.phoneNumber).subscribe(
+    this.http.get('https://relieved-red-quail.cyclic.app/Signup/+91'+this.phoneNumber).subscribe(
       (data: any) => {
         console.log(data);
         this.profile = data; // Store fetched profiles in the array
@@ -69,7 +69,7 @@ export class ProfilePage implements OnInit {
     // Perform logout actions using your AuthService
     this.auth.logout();
     // Navigate to the login page or any other desired page
-    this.route.navigate(['/login']); // Adjust the route accordingly
+    this.route.navigate(['/signup']); // Adjust the route accordingly
   }
 
   async showLoginAlert() {
@@ -91,6 +91,13 @@ export class ProfilePage implements OnInit {
     });
     await alert.present();
   
+  }
+
+  hasProfileData(): boolean {
+    console.log(this.phoneNumber);
+    return !!this.phoneNumber;
+    console.log(this.phoneNumber);
+
   }
 
 }
