@@ -11,7 +11,7 @@
      <ion-buttons slot="end" class="round">
       <ion-button class="home" routerLink="/welcom">home</ion-button>
       <ion-button class="home" routerLink="/profile">about</ion-button>
-      <ion-button *ngIf="isLoggedIn" class="home" (click)="logout()">logout</ion-button>
+      <ion-button *ngIf="isLoggedIn" class="home" (click)="logout()" routerLink="/welcom">logout</ion-button>
       <ion-button *ngIf="!isLoggedIn" class="home">login</ion-button>
      </ion-buttons>
   </ion-toolbar>

@@ -69,7 +69,7 @@ export class ProfilePage implements OnInit {
     // Perform logout actions using your AuthService
     this.auth.logout();
     // Navigate to the login page or any other desired page
-    this.route.navigate(['/signup']); // Adjust the route accordingly
+    // this.route.navigate(['./signup']); // Adjust the route accordingly
   }
 
   async showLoginAlert() {

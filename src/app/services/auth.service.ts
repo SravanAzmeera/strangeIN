@@ -71,7 +71,6 @@ isAuthenticated(): boolean {
 logout() {
   // Clear user data and sign out
   localStorage.removeItem('phoneNumber'); // Clear any user-specific data
-  console.log(localStorage);
   this.fireAuth.signOut(); // Sign out the user
 }
 
